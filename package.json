@@ -1,0 +1,15 @@
+{
+  "name": "fordtech-academy-telegram-gemini",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ford-inspired Tech Academy with Telegram Login Widget verification and server-side Gemini API proxy",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
