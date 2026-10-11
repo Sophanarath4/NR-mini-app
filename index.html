@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#061a33">
-<title>FordTech Academy — Smart Learning</title>
+<title>FordTech Academy — Full Smart Learning</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest"></script>
 <style>
@@ -14,11 +14,6 @@
 body.light-mode{color-scheme:light;--bg:#f3f7fc;--panel:#ffffff;--line:#d7e1ed;background:#f3f7fc;color:#172033}
 body.light-mode .glass,body.light-mode .card{background:#fff!important;color:#172033!important;border-color:#d7e1ed!important;box-shadow:0 10px 30px #10213b0c}
 body.light-mode .field{background:#fff!important;color:#172033!important;border-color:#cbd5e1!important}
-body.light-mode .navbtn{color:#475569}body.light-mode .navbtn.active,body.light-mode .navbtn:hover{background:#dbeafe;color:#1d4ed8}
-body.light-mode header,body.light-mode aside,body.light-mode .bg-\\[\\#091523\\],body.light-mode .bg-\\[\\#081321\\]\\/95{background:#fff!important;border-color:#d7e1ed!important}
-body.light-mode .text-slate-400,body.light-mode .text-slate-500,body.light-mode .text-slate-300{color:#475569!important}
-body.light-mode .bg-slate-950\\70,body.light-mode .bg-slate-800{background:#eef2f7!important;color:#172033!important}
-body.light-mode .border-slate-800{border-color:#d7e1ed!important}
 .glass{background:linear-gradient(145deg,rgba(12,36,64,.97),rgba(6,20,38,.99));border:1px solid #244d78;box-shadow:0 22px 70px #0005;backdrop-filter:blur(18px)}
 .btn{transition:.2s;border-radius:12px}.btn:hover{transform:translateY(-1px);filter:brightness(1.12)}
 .field{width:100%;background:#07111f;border:1px solid #263a53;border-radius:12px;padding:11px 13px;outline:none;color:#e5edf7}
@@ -29,21 +24,24 @@ body.light-mode .border-slate-800{border-color:#d7e1ed!important}
 .card{background:linear-gradient(150deg,#0d223a,#09192b);border:1px solid #1b3b5c;border-radius:18px;transition:.2s}
 .card:hover{border-color:#37618e;transform:translateY(-2px)}
 ::-webkit-scrollbar{width:7px}::-webkit-scrollbar-thumb{background:#29425e;border-radius:10px}
-.ford-wordmark{display:inline-flex;align-items:center;justify-content:center;border:2px solid #cbd5e1;border-radius:50%;padding:5px 15px;font-family:Arial,sans-serif;font-style:italic;font-weight:900;letter-spacing:.04em;color:#eaf6ff;box-shadow:inset 0 0 0 2px #174b83;background:linear-gradient(135deg,#07539a,#092c57)}.ai-fab{position:fixed;right:20px;bottom:20px;z-index:40;box-shadow:0 12px 35px #0077ff55;display:none}body.app-active .ai-fab{display:flex}.login-hero{background:radial-gradient(circle at 80% 20%,#14558d88,transparent 36%),linear-gradient(135deg,#06162a,#0b2e52 55%,#061426)}.telegram-ready{border-color:#168bd0!important;background:#092b48!important;color:#d8f1ff!important}@media(min-width:900px){.app-shell{max-width:1320px;margin:22px auto;border:1px solid #1c3047;border-radius:26px;overflow:hidden;min-height:calc(100vh - 44px)}}
+.ford-wordmark{display:inline-flex;align-items:center;justify-content:center;border:2px solid #cbd5e1;border-radius:50%;padding:5px 15px;font-family:Arial,sans-serif;font-style:italic;font-weight:900;letter-spacing:.04em;color:#eaf6ff;box-shadow:inset 0 0 0 2px #174b83;background:linear-gradient(135deg,#07539a,#092c57)}
+@media(min-width:900px){.app-shell{max-width:1320px;margin:22px auto;border:1px solid #1c3047;border-radius:26px;overflow:hidden;min-height:calc(100vh - 44px)}}
 </style>
 </head>
 <body>
+
+<!-- Login Screen -->
 <div id="loginScreen" class="min-h-screen flex items-center justify-center p-5">
  <div class="w-full max-w-md">
-  <div class="text-center mb-8 login-hero rounded-3xl p-7 border border-blue-900/70 shadow-2xl">
+  <div class="text-center mb-8 rounded-3xl p-7 border border-blue-900/70 shadow-2xl bg-gradient-to-br from-blue-950 to-slate-900">
    <div class="ford-wordmark mx-auto">FORD</div>
    <p class="text-sky-300 text-[10px] tracking-[.28em] mt-5">TECHNOLOGY • INNOVATION • FUTURE</p>
    <h1 class="text-3xl sm:text-4xl font-extrabold mt-2">FordTech <span class="text-sky-300">Academy</span></h1>
    <p class="text-blue-100/75 text-sm mt-2">រៀនបច្ចេកវិទ្យា។ បង្កើតអនាគត។</p>
    <div class="flex flex-wrap justify-center gap-2 mt-5"><span class="tag">✦ AI Learning</span><span class="tag">Secure Access</span><span class="tag">Tech Skills</span></div>
   </div>
- <!-- Form សម្រាប់វាយ Username និង Password -->
-<div class="glass rounded-3xl p-6 sm:p-8">
+
+  <div class="glass rounded-3xl p-6 sm:p-8">
     <h2 class="text-xl font-bold">សូមស្វាគមន៍ 👋</h2>
     <p class="text-slate-400 text-sm mt-1 mb-5">សូមបញ្ចូល Username និង Password ដើម្បីចូលប្រើប្រាស់។</p>
 
@@ -61,56 +59,18 @@ body.light-mode .border-slate-800{border-color:#d7e1ed!important}
         </button>
     </form>
     <p id="loginErrorMsg" class="text-rose-400 text-xs mt-3 hidden">ឈ្មោះអ្នកប្រើប្រាស់ ឬ លេខសម្ងាត់មិនត្រឹមត្រូវទេ!</p>
+  </div>
+ </div>
 </div>
 
-<script>
-    // មុខងារផ្ទៀងផ្ទាត់ Username និង Password សម្រាប់ Admin និង កូនជាង
-    function handleCustomLogin(event) {
-        event.preventDefault();
-        
-        const user = document.getElementById('customUsername').value.trim();
-        const pass = document.getElementById('customPassword').value.trim();
-        const errorMsg = document.getElementById('loginErrorMsg');
-
-        // កំណត់ Username និង Password សម្រាប់ Admin និង កូនជាង (Staff)
-        // បងអាចដូរPasswordតាមចិត្តចង់ទីនេះ
-        const accounts = {
-            "admin": { pass: "admin1234", role: "Admin", name: "Ford Admin" },
-            "staff": { pass: "staff1234", role: "Member", name: "Ford Technician (កូនជាង)" }
-        };
-
-        if(accounts[user] && accounts[user].pass === pass) {
-            errorMsg.classList.add('hidden');
-            
-            // លាក់ Login Screen និងបង្ហាញ Main App Shell
-            document.getElementById('loginScreen').classList.add('hidden');
-            document.getElementById('appShell').classList.remove('hidden');
-            document.body.classList.add('app-active');
-
-            // កំណត់បង្ហាញឈ្មោះ និងសិទ្ធិ
-            document.getElementById('currentUsername').innerText = accounts[user].name;
-            document.getElementById('userAvatar').innerText = user.charAt(0).toUpperCase();
-
-            // ប្រសិនបើមិនមែនជា Admin អាចលាក់ Tab Admin ចោលមិនឱ្យចូលເບິ່ງបាន
-            if(accounts[user].role !== 'Admin') {
-                const adminNav = document.getElementById('navAdmin');
-                if(adminNav) adminNav.style.display = 'none';
-            }
-
-            // កត់ត្រាប្រវត្តិ Log
-            if(typeof recordLog === 'function') {
-                recordLog(accounts[user].name, 'Login ចូលប្រព័ន្ធដោយជោគជ័យ');
-            }
-        } else {
-            errorMsg.classList.remove('hidden');
-        }
-    }
-</script>
-
-<div id="appScreen" class="hidden app-shell">
+<!-- Main App Shell -->
+<div id="appShell" class="hidden app-shell">
  <div class="min-h-screen lg:min-h-0 lg:flex">
   <aside class="hidden lg:flex w-64 shrink-0 flex-col bg-[#091523] border-r border-[#1d3047] p-5">
-   <div class="flex items-center gap-3 mb-10"><div class="ford-wordmark !text-xs !px-2 !py-2">FORD</div><div><div class="font-extrabold">FordTech Academy</div><div class="text-[10px] tracking-widest text-sky-300">SMART LEARNING HUB</div></div></div>
+   <div class="flex items-center gap-3 mb-10">
+    <div class="ford-wordmark !text-xs !px-2 !py-2">FORD</div>
+    <div><div class="font-extrabold text-sm">FordTech Academy</div><div class="text-[10px] tracking-widest text-sky-300">SMART LEARNING HUB</div></div>
+   </div>
    <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-3">Workspace</p>
    <nav class="space-y-1">
     <button class="navbtn active w-full" data-page="home"><i data-lucide="layout-dashboard" class="w-4 h-4"></i> ទំព័រដើម</button>
@@ -119,530 +79,348 @@ body.light-mode .border-slate-800{border-color:#d7e1ed!important}
     <button class="navbtn w-full" data-page="history"><i data-lucide="history" class="w-4 h-4"></i> បានមើលរួច</button>
     <button class="navbtn w-full admin-only" data-page="admin"><i data-lucide="shield-check" class="w-4 h-4"></i> គ្រប់គ្រង Admin</button>
    </nav>
-   <div class="mt-auto p-4 rounded-2xl bg-gradient-to-br from-blue-950 to-slate-900 border border-blue-900/50"><i data-lucide="sparkles" class="w-5 h-5 text-cyan-300"></i><p class="font-bold text-sm mt-3">រៀនរាល់ថ្ងៃ</p><p class="text-xs text-slate-400 mt-1">ចំណេះដឹងថ្មីៗ ជួយបង្កើតអនាគតថ្មី។</p></div>
   </aside>
+  
   <main class="min-w-0 flex-1">
    <header class="sticky top-0 z-20 bg-[#081321]/95 backdrop-blur-xl border-b border-[#1d3047] px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
-    <div class="flex items-center gap-3"><div class="lg:hidden w-9 h-9 rounded-xl bg-blue-800 border border-blue-500/40 flex items-center justify-center"><i data-lucide="cpu" class="w-5 h-5"></i></div><div><div class="font-bold text-sm sm:text-base" id="pageTitle">ទំព័រដើម</div><div class="text-[11px] text-slate-500">FordTech · Your smart learning space</div></div></div>
-    <div class="flex items-center gap-2"><button id="aiOpenBtn" class="tag flex items-center gap-1 !border-violet-500/40 !text-violet-200"><i data-lucide="sparkles" class="w-3 h-3"></i><span class="hidden sm:inline">Gemini AI</span><span class="sm:hidden">AI</span></button><select id="languageSelect" aria-label="Language" class="field !w-auto !py-2 !px-2 text-xs"><option value="km">ខ្មែរ</option><option value="en">English</option></select><button id="themeToggle" class="tag flex items-center gap-1" title="Dark / Light mode"><i data-lucide="sun-moon" class="w-3 h-3"></i><span id="themeLabel">Dark</span></button><div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-slate-950" id="avatar">A</div><button id="logoutBtn" title="Logout" class="p-2 text-slate-400 hover:text-rose-300"><i data-lucide="log-out" class="w-4 h-4"></i></button></div>
+    <div class="flex items-center gap-3">
+     <div><div class="font-bold text-sm sm:text-base" id="pageTitle">ទំព័រដើម</div><div class="text-[11px] text-slate-500" id="currentUsername">Ford User</div></div>
+    </div>
+    <div class="flex items-center gap-2">
+     <button id="themeToggle" onclick="toggleThemeMode()" class="tag flex items-center gap-1 cursor-pointer" title="Dark / Light mode"><i data-lucide="sun-moon" class="w-3 h-3"></i><span id="themeLabel">Dark</span></button>
+     <div class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center font-bold text-slate-950" id="userAvatar">A</div>
+     <button id="logoutBtn" onclick="logoutApp()" title="Logout" class="p-2 text-slate-400 hover:text-rose-300"><i data-lucide="log-out" class="w-4 h-4"></i></button>
+    </div>
    </header>
-   <div class="lg:hidden flex gap-1 overflow-x-auto px-3 py-2 border-b border-[#1d3047] bg-[#091523]">
-    <button class="navbtn active" data-page="home"><i data-lucide="layout-dashboard" class="w-4 h-4"></i>ដើម</button><button class="navbtn" data-page="lessons"><i data-lucide="play-square" class="w-4 h-4"></i>មេរៀន</button><button class="navbtn" data-page="favorites"><i data-lucide="bookmark" class="w-4 h-4"></i>ចំណូលចិត្ត</button><button class="navbtn" data-page="history"><i data-lucide="history" class="w-4 h-4"></i>ប្រវត្តិ</button><button class="navbtn admin-only" data-page="admin"><i data-lucide="shield-check" class="w-4 h-4"></i>Admin</button>
-   </div>
+   
    <div id="pageContent" class="p-4 sm:p-6 lg:p-8 space-y-6"></div>
-   <footer class="px-6 py-5 border-t border-[#1d3047] text-xs text-slate-500 flex flex-col sm:flex-row gap-2 justify-between"><span>© 2026 Tech Academy · Learning Hub</span><span>Made for curious minds ✦</span></footer>
+   <footer class="px-6 py-5 border-t border-[#1d3047] text-xs text-slate-500 flex justify-between"><span>© 2026 FordTech Academy · Learning Hub</span><span>Full Version ✦</span></footer>
   </main>
  </div>
 </div>
-<button id="aiFloatingBtn" class="ai-fab btn rounded-full bg-gradient-to-r from-violet-600 to-blue-600 text-white px-4 py-3 font-bold flex items-center gap-2"><i data-lucide="sparkles" class="w-5 h-5"></i><span>Gemini AI</span></button>
 
-<div id="aiModal" class="hidden fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm p-3 sm:p-6 items-center justify-center">
- <section class="glass rounded-3xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
-  <div class="p-5 border-b border-[#1d3047] flex items-center gap-3"><div class="w-11 h-11 rounded-xl bg-gradient-to-br from-violet-600 to-blue-500 flex items-center justify-center"><i data-lucide="sparkles" class="w-6 h-6 text-white"></i></div><div class="flex-1"><h2 class="font-extrabold text-lg">Gemini AI Learning Assistant</h2><p class="text-xs text-slate-400">សួរអំពី Coding, Electronics, FordTech និងមេរៀន</p></div><button id="aiCloseBtn" class="p-2 rounded-xl hover:bg-slate-800"><i data-lucide="x"></i></button></div>
-  <div id="aiMessages" class="p-5 flex-1 overflow-y-auto space-y-3 min-h-48"><div class="card p-4 text-sm"><b class="text-violet-200">Gemini AI</b><p class="mt-1 text-slate-300">សួស្តី! តើបងចង់រៀន ឬដោះស្រាយបញ្ហាអ្វីថ្ងៃនេះ?</p></div></div>
-  <form id="aiForm" class="p-4 border-t border-[#1d3047] flex gap-2"><input id="aiPrompt" class="field flex-1" placeholder="សរសេរសំណួររបស់អ្នក..." autocomplete="off" required><button class="btn px-4 bg-violet-600 text-white font-bold" type="submit" aria-label="Send to Gemini"><i data-lucide="send" class="w-4 h-4"></i></button></form>
-  <p class="px-5 pb-4 text-[10px] text-slate-500">ត្រូវកំណត់ /api/gemini/chat នៅ Backend។ កុំដាក់ Gemini API Key នៅក្នុង HTML។</p>
- </section>
-</div>
-<div id="telegramWidgetHost" class="hidden"></div>
-<div id="lessonModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-3 sm:p-6 items-center justify-center">
- <div class="glass rounded-3xl w-full max-w-3xl max-h-[92vh] overflow-y-auto">
-  <div class="flex justify-between items-start p-5 sm:p-6 border-b border-[#1d3047]"><div><span id="modalCategory" class="tag">មេរៀន</span><h2 id="modalTitle" class="text-xl sm:text-2xl font-bold mt-3"></h2></div><button id="closeModal" class="p-2 rounded-xl hover:bg-slate-800"><i data-lucide="x"></i></button></div>
-  <div class="p-5 sm:p-6 space-y-4"><div id="videoWrap" class="hidden aspect-video rounded-2xl overflow-hidden bg-black"><iframe id="lessonVideo" class="w-full h-full" allowfullscreen allow="autoplay; encrypted-media; picture-in-picture"></iframe></div><div id="videoPlaceholder" class="aspect-video rounded-2xl bg-gradient-to-br from-blue-950 to-slate-900 border border-[#263a53] flex flex-col items-center justify-center text-center p-6"><i data-lucide="play-circle" class="w-14 h-14 text-cyan-300"></i><p class="font-bold mt-3">មេរៀនរបស់អ្នក</p><p class="text-xs text-slate-400 mt-1">Admin អាចបន្ថែម YouTube URL ដើម្បីបង្ហាញវីដេអូនៅទីនេះ។</p></div><p id="modalDesc" class="text-sm text-slate-300 leading-7 whitespace-pre-wrap"></p><div class="flex flex-wrap gap-2"><button id="markComplete" class="btn rounded-xl px-4 py-2 bg-emerald-600 text-sm font-semibold flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> សម្គាល់ថាបានរៀនរួច</button><button id="modalFavorite" class="btn rounded-xl px-4 py-2 bg-slate-800 text-sm font-semibold flex items-center gap-2"><i data-lucide="bookmark" class="w-4 h-4"></i> ចំណូលចិត្ត</button></div></div>
+<!-- Lesson Modal -->
+<div id="lessonModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm p-3 sm:p-6 items-center justify-center flex">
+ <div class="glass rounded-3xl w-full max-w-3xl max-h-[92vh] overflow-y-auto p-5 sm:p-6">
+  <div class="flex justify-between items-start border-b border-[#1d3047] pb-3 mb-4">
+   <div><span id="modalCategory" class="tag">មេរៀន</span><h2 id="modalTitle" class="text-xl sm:text-2xl font-bold mt-2"></h2></div>
+   <button onclick="closeLesson()" class="p-2 rounded-xl hover:bg-slate-800"><i data-lucide="x"></i></button>
+  </div>
+  <div class="space-y-4">
+   <div id="modalImageContainer" class="hidden mb-3"><img id="modalImg" class="w-full h-48 object-cover rounded-xl border border-slate-700" alt="Lesson Image"></div>
+   <p id="modalDesc" class="text-sm text-slate-300 leading-7 whitespace-pre-wrap"></p>
+   <div class="flex gap-2">
+    <button id="markCompleteBtn" onclick="markCompleted()" class="btn rounded-xl px-4 py-2 bg-emerald-600 text-sm font-semibold flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4"></i> សម្គាល់ថាបានរៀនរួច</button>
+    <button id="modalFavoriteBtn" onclick="toggleFavFromModal()" class="btn rounded-xl px-4 py-2 bg-slate-800 text-sm font-semibold flex items-center gap-2"><i data-lucide="bookmark" class="w-4 h-4"></i> ចំណូលចិត្ត</button>
+   </div>
+  </div>
  </div>
 </div>
 
 <script>
 const $=id=>document.getElementById(id);
 const starterLessons=[
- {id:'battery-reset',title:'ការថែទាំ Battery ឱ្យបានត្រឹមត្រូវ',category:'Hardware',level:'Beginner',duration:'6 នាទី',desc:'ស្វែងយល់ពីការថែទាំថ្មឧបករណ៍ឱ្យបានត្រឹមត្រូវ។\\n\\n• ពិនិត្យសុខភាពថ្មតាមឧបករណ៍ដែលគាំទ្រ។\\n• ប្រើឆ្នាំងសាក និងខ្សែដែលមានគុណភាព។\\n• ជៀសវាងកម្ដៅខ្លាំង និងការទុកថ្មអស់រយៈពេលយូរ។\\n• មិនចាំបាច់បង្ខំឱ្យថ្មអស់ដល់ 0% ជាប្រចាំទេ។',url:''},
- {id:'computer-basics',title:'មូលដ្ឋានគ្រឹះកុំព្យូទ័រ',category:'Computer',level:'Beginner',duration:'10 នាទី',desc:'រៀនពីផ្នែកសំខាន់ៗរបស់កុំព្យូទ័រ៖ CPU, RAM, Storage និងប្រព័ន្ធប្រតិបត្តិការ។\\n\\nសាកល្បងកំណត់អត្តសញ្ញាណផ្នែកនីមួយៗនៅលើកុំព្យូទ័ររបស់អ្នក។',url:''},
- {id:'html-start',title:'ចាប់ផ្តើមរៀន HTML',category:'Coding',level:'Beginner',duration:'12 នាទី',desc:'HTML ប្រើសម្រាប់រៀបចំរចនាសម្ព័ន្ធគេហទំព័រ។\\n\\n• <h1> សម្រាប់ចំណងជើង។\\n• <p> សម្រាប់កថាខណ្ឌ។\\n• <a> សម្រាប់តំណភ្ជាប់។\\n• <img> សម្រាប់រូបភាព។',url:''},
- {id:'arduino-intro',title:'សេចក្តីផ្តើម Arduino និង ESP32',category:'Electronics',level:'Beginner',duration:'8 នាទី',desc:'Arduino និង ESP32 អាចប្រើសម្រាប់គម្រោងអេឡិចត្រូនិក និង IoT។ ចាប់ផ្តើមពីការស្គាល់ Board, USB, GPIO និងការភ្ជាប់ Sensor។ ត្រូវពិនិត្យ Voltage របស់គ្រឿងបន្លាស់មុនភ្ជាប់។',url:''},
- {id:'cyber-safety',title:'សុវត្ថិភាពឌីជីថល',category:'Security',level:'Beginner',duration:'7 នាទី',desc:'• ប្រើពាក្យសម្ងាត់ខ្លាំង និងខុសគ្នាតាមគណនី។\\n• បើក Two-Factor Authentication។\\n• កុំចុចតំណភ្ជាប់មិនស្គាល់ប្រភព។\\n• កុំចែករំលែក OTP ឬពាក្យសម្ងាត់។',url:''}
+ {id:'battery-reset',title:'ការថែទាំ Battery ឱ្យបានត្រឹមត្រូវ',category:'Hardware',level:'Beginner',duration:'6 នាទី',desc:'ស្វែងយល់ពីការថែទាំថ្មឧបករណ៍ឱ្យបានត្រឹមត្រូវ។\n\n• ពិនិត្យសុខភាពថ្មតាមឧបករណ៍ដែលគាំទ្រ。\n• ប្រើឆ្នាំងសាក និងខ្សែដែលមានគុណភាព。\n• ជៀសវាងកម្ដៅខ្លាំង និងការទុកថ្មអស់រយៈពេលយូរ។',image:''},
+ {id:'computer-basics',title:'មូលដ្ឋានគ្រឹះកុំព្យូទ័រ',category:'Computer',level:'Beginner',duration:'10 នាទី',desc:'រៀនពីផ្នែកសំខាន់ៗរបស់កុំព្យូទ័រ៖ CPU, RAM, Storage និងប្រព័ន្ធប្រតិបត្តិការ។',image:''},
+ {id:'html-start',title:'ចាប់ផ្តើមរៀន HTML',category:'Coding',level:'Beginner',duration:'12 នាទី',desc:'HTML ប្រើសម្រាប់រៀបចំរចនាសម្ព័ន្ធគេហទំព័រ និងកូដพื้นฐาน។',image:''}
 ];
+
 let lessons=JSON.parse(localStorage.getItem('ta_lessons')||'null')||starterLessons;
 let favorites=JSON.parse(localStorage.getItem('ta_favorites')||'[]');
 let completed=JSON.parse(localStorage.getItem('ta_completed')||'[]');
 let history=JSON.parse(localStorage.getItem('ta_history')||'[]');
 let logs=JSON.parse(localStorage.getItem('ta_logs')||'[]');
-let appUsers=JSON.parse(localStorage.getItem('ta_users')||'null')||[{username:'admin',role:'admin'},{username:'member',role:'user'}];
-let broadcasts=JSON.parse(localStorage.getItem('ta_broadcasts')||'[]');
-let currentUser='',currentRole='user',currentLesson=null,currentPage='home',editingId=null;
-let currentLanguage=localStorage.getItem('ta_language')||'km';
-// Configure these on deployment. Keep API secrets on the server only.
-const TELEGRAM_BOT_USERNAME='YOUR_TELEGRAM_BOT_USERNAME';
-const TELEGRAM_VERIFY_ENDPOINT='/api/telegram/verify';
-const GEMINI_CHAT_ENDPOINT='/api/gemini/chat';
-let telegramVerified=false, telegramProfile=null, telegramSessionToken=null;
-function setTelegramStatus(message,ok=false){const el=$('telegramStatus'),badge=$('telegramBadge'),btn=$('telegramConnectBtn'),submit=$('loginSubmitBtn');if(el)el.textContent=message;if(badge){badge.textContent=ok?'Verified':'Required';badge.className='tag '+(ok?'!border-emerald-500 !text-emerald-200':'')}if(btn&&ok){btn.innerHTML='<i data-lucide="check-circle" class="w-4 h-4"></i> Telegram បានភ្ជាប់រួច';btn.disabled=true;btn.classList.add('opacity-70')}if(submit){submit.disabled=!ok;submit.classList.toggle('opacity-50',!ok);submit.classList.toggle('cursor-not-allowed',!ok);submit.innerHTML=ok?'<i data-lucide="log-in" class="w-4 h-4"></i> ចូលប្រព័ន្ធ':'<i data-lucide="lock-keyhole" class="w-4 h-4"></i> ភ្ជាប់ Telegram ជាមុន ដើម្បីចូល'}renderIcons()}
-function connectTelegram(){if(telegramVerified){setTelegramStatus('បានផ្ទៀងផ្ទាត់ Telegram រួចហើយ។',true);return}if(!TELEGRAM_BOT_USERNAME||TELEGRAM_BOT_USERNAME==='YOUR_TELEGRAM_BOT_USERNAME'){setTelegramStatus('មិនទាន់កំណត់ Telegram Bot Username ទេ។ ត្រូវកំណត់ Bot និង Backend មុន។',false);return}if(!window.isSecureContext){setTelegramStatus('Telegram Login Widget ត្រូវដំណើរការលើ HTTPS ឬ localhost។',false);return}setTelegramStatus('កំពុងបើក Telegram Login…',false);if(window.telegramLoginWidgetLoaded){window.open('https://t.me/'+TELEGRAM_BOT_USERNAME,'_blank','noopener');return}const host=$('telegramWidgetHost');host.innerHTML='';const script=document.createElement('script');script.async=true;script.src='https://telegram.org/js/telegram-widget.js?22';script.setAttribute('data-telegram-login',TELEGRAM_BOT_USERNAME);script.setAttribute('data-size','large');script.setAttribute('data-userpic','false');script.setAttribute('data-request-access','write');script.setAttribute('data-onauth','onTelegramAuth(user)');host.appendChild(script);window.telegramLoginWidgetLoaded=true;setTelegramStatus('សូមចុចប៊ូតុង Telegram Login ដែលបានបង្ហាញ។',false);host.classList.remove('hidden');host.className='mt-3 flex justify-center'}
-window.onTelegramAuth=async function(user){try{setTelegramStatus('កំពុងផ្ទៀងផ្ទាត់គណនីជាមួយ Server…',false);const response=await fetch(TELEGRAM_VERIFY_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({telegram:user})});if(!response.ok)throw new Error('VERIFY_FAILED');const result=await response.json();if(!result.verified||!result.sessionToken)throw new Error('VERIFY_FAILED');telegramVerified=true;telegramProfile=result.user||user;telegramSessionToken=result.sessionToken;currentUser=result.username||telegramProfile.username||String(telegramProfile.id);currentRole=result.role==='admin'?'admin':'user';setTelegramStatus('បានផ្ទៀងផ្ទាត់ Telegram រួច — '+(telegramProfile.username?'@'+telegramProfile.username:'Account linked'),true);$('telegramWidgetHost').classList.add('hidden');document.body.classList.add('app-active');$('loginScreen').classList.add('hidden');$('appScreen').classList.remove('hidden');$('avatar').textContent=(currentUser[0]||'U').toUpperCase();document.querySelectorAll('.admin-only').forEach(el=>el.classList.toggle('hidden',currentRole!=='admin'));log('ចូលប្រព័ន្ធដោយ Telegram');go('home');renderIcons()}catch(e){telegramVerified=false;telegramSessionToken=null;setTelegramStatus('ផ្ទៀងផ្ទាត់មិនបានទេ។ ពិនិត្យ Telegram Bot និង Server hash validation។',false)}};
-function openAI(){if(!telegramVerified||!currentUser){alert('សូមភ្ជាប់ Telegram និងចូលប្រព័ន្ធជាមុនសិន។');return}$('aiModal').classList.remove('hidden');$('aiModal').classList.add('flex');$('aiPrompt').focus();renderIcons()}
-function closeAI(){$('aiModal').classList.add('hidden');$('aiModal').classList.remove('flex')}
-function addAIMessage(text,who='ai'){const div=document.createElement('div');div.className=who==='user'?'ml-8 rounded-2xl rounded-br-sm bg-blue-700/40 border border-blue-500/30 p-3 text-sm whitespace-pre-wrap':'mr-8 rounded-2xl rounded-bl-sm bg-violet-950/40 border border-violet-700/30 p-3 text-sm whitespace-pre-wrap';const label=document.createElement('div');label.className='text-[10px] font-bold mb-1 '+(who==='user'?'text-sky-200':'text-violet-200');label.textContent=who==='user'?'អ្នក':'Gemini AI';const body=document.createElement('div');body.textContent=text;div.append(label,body);$('aiMessages').appendChild(div);$('aiMessages').scrollTop=$('aiMessages').scrollHeight}
-async function sendAIMessage(e){e.preventDefault();if(!telegramVerified||!currentUser){alert('ត្រូវភ្ជាប់ Telegram មុនប្រើ Gemini AI។');closeAI();return}const prompt=$('aiPrompt').value.trim();if(!prompt)return;$('aiPrompt').value='';addAIMessage(prompt,'user');const waiting=document.createElement('div');waiting.className='text-xs text-violet-200 p-2';waiting.textContent='Gemini កំពុងគិត…';$('aiMessages').appendChild(waiting);try{const r=await fetch(GEMINI_CHAT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+telegramSessionToken},credentials:'include',body:JSON.stringify({message:prompt,language:currentLanguage})});if(!r.ok)throw new Error('AI_BACKEND_UNAVAILABLE');const data=await r.json();waiting.remove();addAIMessage(data.reply||data.text||'មិនមានចម្លើយទេ។','ai')}catch(err){waiting.remove();addAIMessage('មិនទាន់ភ្ជាប់ Gemini Backend ទេ។ សូមដំឡើង /api/gemini/chat និងរក្សា GEMINI_API_KEY នៅ Server environment មុន។','ai')}}
+let currentUser='',currentRole='user',currentLesson=null,currentPage='home',uploadedImgBase64='';
 
-function save(){localStorage.setItem('ta_lessons',JSON.stringify(lessons));localStorage.setItem('ta_favorites',JSON.stringify(favorites));localStorage.setItem('ta_completed',JSON.stringify(completed));localStorage.setItem('ta_history',JSON.stringify(history));localStorage.setItem('ta_logs',JSON.stringify(logs));localStorage.setItem('ta_users',JSON.stringify(appUsers));localStorage.setItem('ta_broadcasts',JSON.stringify(broadcasts))}
-function applyTheme(mode){document.body.classList.toggle('light-mode',mode==='light');localStorage.setItem('ta_theme',mode);if($('themeLabel'))$('themeLabel').textContent=mode==='light'?'Light':'Dark'}
-function applyLanguage(lang){currentLanguage=lang;localStorage.setItem('ta_language',lang);document.documentElement.lang=lang;const isEn=lang==='en';const map={home:isEn?'Home':'ទំព័រដើម',lessons:isEn?'All lessons':'មេរៀនទាំងអស់',favorites:isEn?'Favorites':'មេរៀនចំណូលចិត្ត',history:isEn?'Learning history':'ប្រវត្តិការរៀន',admin:isEn?'Admin Panel':'គ្រប់គ្រង Admin'};document.querySelectorAll('[data-page]').forEach(b=>{const p=b.dataset.page;const labels={home:isEn?'Home':'ទំព័រដើម',lessons:isEn?'Lessons':'មេរៀនទាំងអស់',favorites:isEn?'Favorites':'ចំណូលចិត្ត',history:isEn?'History':'ប្រវត្តិ',admin:'Admin'};const icon=b.querySelector('i');b.textContent='';if(icon)b.appendChild(icon);b.append(' '+(labels[p]||p))});if($('pageTitle')&&map[currentPage])$('pageTitle').textContent=map[currentPage];if(currentUser)renderPage();renderIcons()}
-function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function log(action){logs.unshift({user:currentUser,action,time:new Date().toLocaleString()});logs=logs.slice(0,100);save()}
-function videoEmbed(url=''){try{let u=new URL(url);if(u.hostname.includes('youtu.be'))return 'https://www.youtube-nocookie.com/embed/'+u.pathname.slice(1);if(u.hostname.includes('youtube.com')){let id=u.searchParams.get('v');if(!id&&u.pathname.includes('/embed/'))id=u.pathname.split('/embed/')[1];if(id)return 'https://www.youtube-nocookie.com/embed/'+id}if(u.hostname==='www.youtube-nocookie.com'&&u.pathname.includes('/embed/'))return url}catch(e){}return ''}
-function login(e){e.preventDefault();if(!telegramVerified||!telegramSessionToken){setTelegramStatus('ត្រូវភ្ជាប់ និងផ្ទៀងផ្ទាត់ Telegram មុនចូលប្រព័ន្ធ។',false);return}let name=$('usernameInput').value.trim(),pass=$('passwordInput').value;if(!name||!pass)return;
- // Demo-only local login. Real production authentication must be server-side.
- if(name.toLowerCase()==='admin'&&pass==='123456'){currentRole='admin';}
- else {const known=appUsers.find(u=>u.username.toLowerCase()===name.toLowerCase());if(known){if(pass.length<4){$('loginError').classList.remove('hidden');return}currentRole=known.role||'user';}else if(pass.length>=4){currentRole='user';appUsers.push({username:name,role:'user'});save()}else{$('loginError').classList.remove('hidden');return}}
- currentUser=name;document.body.classList.add('app-active'); $('loginError').classList.add('hidden');$('loginScreen').classList.add('hidden');$('appScreen').classList.remove('hidden');$('avatar').textContent=name[0].toUpperCase();
- document.querySelectorAll('.admin-only').forEach(el=>el.classList.toggle('hidden',currentRole!=='admin'));log('ចូលប្រព័ន្ធ');go('home');renderIcons()} 
-function signup(){if(!telegramVerified||!telegramSessionToken){setTelegramStatus('ត្រូវភ្ជាប់ Telegram មុនបង្កើតគណនី។',false);return}const name=$('usernameInput').value.trim(),pass=$('passwordInput').value;if(name.length<3||pass.length<4){alert('សូមបញ្ចូល Username យ៉ាងតិច 3 តួ និង Password យ៉ាងតិច 4 តួ។');return}if(appUsers.some(u=>u.username.toLowerCase()===name.toLowerCase())){alert('Username នេះមានរួចហើយ។');return}appUsers.push({username:name,role:'user'});save();alert('បង្កើតគណនី Demo បានហើយ។ សូមចុច ចូលប្រព័ន្ធ។')}
-function logout(){log('ចាកចេញពីប្រព័ន្ធ');document.body.classList.remove('app-active');currentUser='';telegramVerified=false;telegramProfile=null;telegramSessionToken=null;$('appScreen').classList.add('hidden');$('loginScreen').classList.remove('hidden');$('passwordInput').value='';$('telegramConnectBtn').disabled=false;$('telegramConnectBtn').classList.remove('opacity-70');$('telegramConnectBtn').innerHTML='<i data-lucide="send" class="w-4 h-4"></i> ភ្ជាប់គណនី Telegram';setTelegramStatus('មិនទាន់បានផ្ទៀងផ្ទាត់គណនី Telegram',false);}
-function go(page){if(page==='admin'&&currentRole!=='admin')page='home';currentPage=page;document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));let titles={home:'ទំព័រដើម',lessons:'មេរៀនទាំងអស់',favorites:'មេរៀនចំណូលចិត្ត',history:'ប្រវត្តិការរៀន',admin:'គ្រប់គ្រង Admin'};$('pageTitle').textContent=titles[page];renderPage();window.scrollTo({top:0,behavior:'smooth'})}
-function lessonCard(l){let done=completed.includes(l.id),fav=favorites.includes(l.id);return `<article class="card p-4 sm:p-5"><div class="flex gap-3"><div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-blue-600/30 to-cyan-400/10 border border-blue-400/20 flex items-center justify-center"><i data-lucide="${l.category==='Coding'?'code-2':l.category==='Electronics'?'cpu':l.category==='Security'?'shield-check':l.category==='Hardware'?'battery-charging':'monitor'}" class="w-6 h-6 text-cyan-300"></i></div><div class="min-w-0 flex-1"><div class="flex flex-wrap gap-2 mb-2"><span class="tag">${esc(l.category)}</span>${done?'<span class="tag text-emerald-300">បានរៀនរួច ✓</span>':''}</div><h3 class="font-bold leading-6">${esc(l.title)}</h3><p class="text-xs text-slate-400 mt-2 line-clamp-2">${esc(l.desc.slice(0,110))}${l.desc.length>110?'…':''}</p><div class="flex items-center justify-between mt-4"><span class="text-[11px] text-slate-500"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i>${esc(l.duration||'មិនកំណត់')}</span><div class="flex gap-2"><button class="p-2 rounded-lg hover:bg-slate-800 ${fav?'text-cyan-300':'text-slate-500'}" onclick="toggleFav('${l.id}')" title="ចំណូលចិត្ត"><i data-lucide="bookmark" class="w-4 h-4"></i></button><button class="btn rounded-lg bg-blue-600/20 text-blue-300 px-3 py-2 text-xs font-bold" onclick="openLesson('${l.id}')">រៀនឥឡូវ <i data-lucide="arrow-up-right" class="inline w-3 h-3"></i></button></div></div></div></div></article>`}
-function renderPage(){let root=$('pageContent'),pct=lessons.length?Math.round(completed.filter(id=>lessons.some(l=>l.id===id)).length/lessons.length*100):0;
- if(currentPage==='home'){let recent=history.slice(0,3).map(id=>lessons.find(l=>l.id===id)).filter(Boolean);root.innerHTML=`<section class="relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-blue-950 via-[#10243d] to-[#0b1a2b] border border-blue-900/70"><div class="absolute -right-8 -top-12 w-52 h-52 rounded-full bg-cyan-400/10 blur-2xl"></div><div class="relative max-w-2xl"><span class="tag border-sky-700 text-sky-200">✦ FORDTECH SMART LEARNING</span><h1 class="text-2xl sm:text-4xl font-extrabold leading-tight mt-4">រៀនជំនាញថ្មីៗ។<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-blue-300 to-white">ជំរុញអនាគតឱ្យទៅមុខ។</span></h1><p class="text-slate-300 text-sm mt-3 max-w-lg">ស្វែងយល់ពីបច្ចេកវិទ្យា កុំព្យូទ័រ Coding និងអេឡិចត្រូនិក តាមល្បឿនរបស់អ្នក។</p><button onclick="go('lessons')" class="btn mt-5 rounded-xl px-5 py-3 bg-gradient-to-r from-blue-600 to-cyan-500 font-bold text-sm">ស្វែងរកមេរៀន <i data-lucide="arrow-right" class="inline w-4 h-4 ml-1"></i></button></div></section>
- <section class="grid grid-cols-2 xl:grid-cols-4 gap-3"><div class="card p-4"><div class="text-xs text-slate-400">មេរៀនសរុប</div><div class="text-2xl font-extrabold mt-2">${lessons.length}</div><div class="text-[11px] text-blue-300 mt-1">មេរៀនដែលមាន</div></div><div class="card p-4"><div class="text-xs text-slate-400">បានរៀនរួច</div><div class="text-2xl font-extrabold mt-2">${completed.filter(id=>lessons.some(l=>l.id===id)).length}</div><div class="text-[11px] text-emerald-300 mt-1">ការរីកចម្រើនរបស់អ្នក</div></div><div class="card p-4"><div class="text-xs text-slate-400">ចំណូលចិត្ត</div><div class="text-2xl font-extrabold mt-2">${favorites.length}</div><div class="text-[11px] text-cyan-300 mt-1">បានរក្សាទុក</div></div><div class="card p-4"><div class="text-xs text-slate-400">វឌ្ឍនភាព</div><div class="text-2xl font-extrabold mt-2">${pct}%</div><div class="w-full h-1.5 bg-slate-800 rounded-full mt-3"><div class="h-1.5 bg-gradient-to-r from-blue-500 to-cyan-300 rounded-full" style="width:${pct}%"></div></div></div></section>
- <section><div class="flex items-end justify-between mb-4"><div><p class="text-xs text-cyan-300">KEEP EXPLORING</p><h2 class="text-xl font-bold mt-1">មេរៀនដែលណែនាំ</h2></div><button onclick="go('lessons')" class="text-xs text-blue-300">មើលទាំងអស់ →</button></div><div class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">${lessons.slice(0,3).map(lessonCard).join('')}</div></section>
- <section class="card p-5"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-xl bg-cyan-400/10 flex items-center justify-center"><i data-lucide="target" class="text-cyan-300"></i></div><div class="flex-1"><h3 class="font-bold">គោលដៅការរៀន</h3><p class="text-xs text-slate-400 mt-1">បន្តរៀនមួយមេរៀនក្នុងមួយថ្ងៃ ដើម្បីបង្កើនចំណេះដឹង។</p></div><span class="tag">${completed.length}/${lessons.length}</span></div></section>`;
- }else if(currentPage==='lessons'||currentPage==='favorites'||currentPage==='history'){let list=currentPage==='favorites'?lessons.filter(l=>favorites.includes(l.id)):currentPage==='history'?history.map(id=>lessons.find(l=>l.id===id)).filter(Boolean):lessons;root.innerHTML=`<section class="flex flex-col sm:flex-row sm:items-end justify-between gap-3"><div><p class="text-xs text-cyan-300">${currentPage==='lessons'?'EXPLORE LIBRARY':currentPage==='favorites'?'YOUR SAVED LESSONS':'RECENT ACTIVITY'}</p><h1 class="text-2xl font-extrabold mt-1">${currentPage==='lessons'?'បណ្ណាល័យមេរៀន':currentPage==='favorites'?'មេរៀនចំណូលចិត្ត':'មេរៀនដែលបានមើល'}</h1></div><div class="flex gap-2"><div class="relative flex-1 sm:w-56"><i data-lucide="search" class="w-4 h-4 absolute left-3 top-3 text-slate-500"></i><input id="searchLessons" class="field pl-9" placeholder="ស្វែងរកមេរៀន..."></div><select id="categoryFilter" class="field !w-auto"><option value="all">គ្រប់ប្រភេទ</option>${[...new Set(lessons.map(l=>l.category))].map(c=>`<option>${esc(c)}</option>`).join('')}</select></div></section><div id="lessonGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-3">${list.map(lessonCard).join('')||'<div class="text-sm text-slate-500 py-10">មិនទាន់មានមេរៀននៅទីនេះទេ។</div>'}</div>`;
- let search=$('searchLessons'),filter=$('categoryFilter');function filterCards(){let q=search.value.toLowerCase(),cat=filter.value,arr=list.filter(l=>(l.title+' '+l.desc+' '+l.category).toLowerCase().includes(q)&&(cat==='all'||l.category===cat));$('lessonGrid').innerHTML=arr.map(lessonCard).join('')||'<p class="text-sm text-slate-500">រកមិនឃើញមេរៀនទេ។</p>';renderIcons()}search.addEventListener('input',filterCards);filter.addEventListener('change',filterCards);
- }else if(currentPage==='admin'){root.innerHTML=`<section><p class="text-xs text-cyan-300">CONTENT MANAGEMENT</p><h1 class="text-2xl font-extrabold mt-1">Admin Control Center</h1><p class="text-sm text-slate-400 mt-2">បន្ថែមមេរៀនថ្មី និងគ្រប់គ្រងបណ្ណាល័យមេរៀន។</p></section>
- <div class="grid lg:grid-cols-2 gap-4"><form id="lessonForm" class="card p-5 space-y-3"><div class="flex items-center justify-between"><h2 class="font-bold" id="formHeading">បន្ថែមមេរៀនថ្មី</h2><span class="tag">EDITOR</span></div><label class="text-xs text-slate-400 block">ចំណងជើងមេរៀន</label><input id="newTitle" class="field" placeholder="ឧ. ចាប់ផ្តើមរៀន JavaScript" required><label class="text-xs text-slate-400 block">ប្រភេទមេរៀន</label><select id="newCategory" class="field"><option>Computer</option><option>Coding</option><option>Electronics</option><option>Hardware</option><option>Security</option><option>Automotive</option><option>Other</option></select><label class="text-xs text-slate-400 block">កម្រិត</label><select id="newLevel" class="field"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select><label class="text-xs text-slate-400 block">រយៈពេល</label><input id="newDuration" class="field" placeholder="ឧ. 10 នាទី"><label class="text-xs text-slate-400 block">YouTube URL (បើមាន)</label><input id="newUrl" class="field" type="url" placeholder="https://www.youtube.com/watch?v=..."><label class="text-xs text-slate-400 block">ខ្លឹមសារមេរៀន</label><textarea id="newDesc" class="field min-h-32" placeholder="សរសេរពន្យល់អំពីមេរៀន..." required></textarea><div class="flex gap-2"><button class="btn flex-1 rounded-xl py-3 bg-blue-600 font-bold" id="saveLessonBtn">រក្សាទុកមេរៀន</button><button type="button" id="cancelEdit" class="hidden rounded-xl px-4 bg-slate-800">បោះបង់</button></div><p class="text-[11px] text-amber-300">ចំណាំ៖ ទិន្នន័យរក្សាទុកក្នុង Browser នេះប៉ុណ្ណោះ មិនទាន់ Sync ទៅអ្នកប្រើផ្សេងទេ។</p></form>
- <div class="space-y-4"><div class="grid grid-cols-2 gap-3"><div class="card p-4"><p class="text-xs text-slate-400">មេរៀនសរុប</p><p class="text-2xl font-bold mt-2">${lessons.length}</p></div><div class="card p-4"><p class="text-xs text-slate-400">សកម្មភាពក្នុង Browser</p><p class="text-2xl font-bold mt-2">${logs.length}</p></div></div><div class="card p-5"><h2 class="font-bold mb-4">គ្រប់គ្រងមេរៀន</h2><div class="space-y-2 max-h-[460px] overflow-y-auto">${lessons.map(l=>`<div class="p-3 rounded-xl bg-slate-950/70 border border-[#1d3047] flex gap-2 items-center"><div class="min-w-0 flex-1"><p class="text-sm font-semibold truncate">${esc(l.title)}</p><p class="text-[11px] text-slate-500">${esc(l.category)} · ${esc(l.duration||'')}</p></div><button class="p-2 text-blue-300 hover:bg-blue-950 rounded-lg" onclick="editLesson('${l.id}')" title="កែប្រែ"><i data-lucide="pencil" class="w-4 h-4"></i></button><button class="p-2 text-rose-300 hover:bg-rose-950 rounded-lg" onclick="deleteLesson('${l.id}')" title="លុប"><i data-lucide="trash-2" class="w-4 h-4"></i></button></div>`).join('')}</div></div><div class="card p-5"><div class="flex justify-between items-center mb-3"><h2 class="font-bold">ប្រវត្តិសកម្មភាព</h2><button onclick="clearLogs()" class="text-xs text-rose-300">សម្អាត</button></div><div class="space-y-2 max-h-40 overflow-y-auto">${logs.slice(0,8).map(l=>`<div class="flex justify-between gap-3 text-xs border-b border-slate-800 pb-2"><span>${esc(l.user)} · ${esc(l.action)}</span><span class="text-slate-500 shrink-0">${esc(l.time)}</span></div>`).join('')||'<p class="text-xs text-slate-500">មិនទាន់មានសកម្មភាព</p>'}</div></div><div class="grid sm:grid-cols-2 gap-2"><button onclick="exportData()" class="btn rounded-xl p-3 border border-[#29425e] text-sm"><i data-lucide="download" class="inline w-4 h-4 mr-2"></i>Export JSON</button><button onclick="document.getElementById('importDataFile').click()" class="btn rounded-xl p-3 border border-[#29425e] text-sm"><i data-lucide="upload" class="inline w-4 h-4 mr-2"></i>Import Backup</button><input id="importDataFile" type="file" accept="application/json,.json" class="hidden" onchange="importData(event)"></div><button onclick="enableNotifications()" class="btn w-full rounded-xl p-3 border border-[#29425e] text-sm"><i data-lucide="bell-ring" class="inline w-4 h-4 mr-2"></i>បើក Browser Notifications</button>
- <div class="card p-5"><h2 class="font-bold mb-3">ផ្ញើសារជូនដំណឹងទៅសមាជិក</h2><textarea id="broadcastMessage" class="field min-h-24" placeholder="សរសេរដំណឹង ឬប្រូម៉ូសិន..."></textarea><button onclick="sendBroadcast()" class="btn mt-3 w-full rounded-xl p-3 bg-cyan-600 text-sm font-bold"><i data-lucide="send" class="inline w-4 h-4 mr-2"></i>ផ្ញើសារ (Simulation)</button><div class="mt-3 space-y-2 max-h-36 overflow-y-auto">${broadcasts.slice(0,5).map(b=>`<div class="rounded-xl bg-slate-950/70 p-3 text-xs"><p>${esc(b.message)}</p><p class="text-slate-500 mt-1">${esc(b.time)} · ${b.recipients} users</p></div>`).join('')||'<p class="text-xs text-slate-500">មិនទាន់មានសារជូនដំណឹងទេ។</p>'}</div></div>
- <div class="card p-5"><h2 class="font-bold mb-3">គ្រប់គ្រងសិទ្ធិអ្នកប្រើប្រាស់</h2><p class="text-xs text-amber-300 mb-3">Demo mode: សិទ្ធិត្រូវបានរក្សាទុកក្នុង Browser នេះប៉ុណ្ណោះ។</p><div class="space-y-2 max-h-64 overflow-y-auto">${appUsers.map(u=>`<div class="flex items-center gap-2 rounded-xl bg-slate-950/70 p-3"><div class="min-w-0 flex-1"><p class="text-sm font-semibold">${esc(u.username)}</p><p class="text-xs text-slate-500">${u.role==='admin'?'Administrator':'Member'}</p></div><select class="field !w-auto !py-2 text-xs" onchange="changeRole('${encodeURIComponent(u.username)}',this.value)" ${u.username.toLowerCase()==='admin'?'disabled':''}><option value="user" ${u.role==='user'?'selected':''}>User</option><option value="admin" ${u.role==='admin'?'selected':''}>Admin</option></select></div>`).join('')}</div></div></div></div>`;
- $('lessonForm').addEventListener('submit',saveLessonForm);$('cancelEdit').addEventListener('click',resetEditor);
- }}
-function openLesson(id){let l=lessons.find(x=>x.id===id);if(!l)return;currentLesson=l;history=[id,...history.filter(x=>x!==id)].slice(0,30);save();$('modalTitle').textContent=l.title;$('modalCategory').textContent=l.category+' · '+(l.level||'Beginner');$('modalDesc').textContent=l.desc;$('modalFavorite').innerHTML=`<i data-lucide="bookmark" class="w-4 h-4"></i> ${favorites.includes(id)?'ដកចេញពីចំណូលចិត្ត':'ចំណូលចិត្ត'}`;$('markComplete').innerHTML=`<i data-lucide="check-circle" class="w-4 h-4"></i> ${completed.includes(id)?'បានសម្គាល់រួច ✓':'សម្គាល់ថាបានរៀនរួច'}`;let embed=videoEmbed(l.url);$('videoWrap').classList.toggle('hidden',!embed);$('videoPlaceholder').classList.toggle('hidden',!!embed);$('lessonVideo').src=embed||'';$('lessonModal').classList.remove('hidden');$('lessonModal').classList.add('flex');renderIcons()}
-function closeLesson(){ $('lessonModal').classList.add('hidden');$('lessonModal').classList.remove('flex');$('lessonVideo').src='';currentLesson=null;renderPage()}
-function toggleFav(id){favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[id,...favorites];save();renderPage();if(currentLesson&&currentLesson.id===id)$('modalFavorite').innerHTML=`<i data-lucide="bookmark" class="w-4 h-4"></i> ${favorites.includes(id)?'ដកចេញពីចំណូលចិត្ត':'ចំណូលចិត្ត'}`;renderIcons()}
-function saveLessonForm(e){e.preventDefault();let data={title:$('newTitle').value.trim(),category:$('newCategory').value,level:$('newLevel').value,duration:$('newDuration').value.trim()||'មិនកំណត់',url:$('newUrl').value.trim(),desc:$('newDesc').value.trim()};if(!data.title||!data.desc)return;if(editingId){lessons=lessons.map(l=>l.id===editingId?{...l,...data}:l);log('កែប្រែមេរៀន: '+data.title)}else{data.id='lesson-'+Date.now();lessons.unshift(data);log('បន្ថែមមេរៀន: '+data.title)}save();resetEditor();renderPage();renderIcons()}
-function editLesson(id){let l=lessons.find(x=>x.id===id);if(!l)return;editingId=id;$('newTitle').value=l.title;$('newCategory').value=l.category;$('newLevel').value=l.level||'Beginner';$('newDuration').value=l.duration||'';$('newUrl').value=l.url||'';$('newDesc').value=l.desc;$('formHeading').textContent='កែប្រែមេរៀន';$('saveLessonBtn').textContent='រក្សាទុកការកែប្រែ';$('cancelEdit').classList.remove('hidden');$('lessonForm').scrollIntoView({behavior:'smooth'})}
-function resetEditor(){editingId=null;$('lessonForm').reset();$('formHeading').textContent='បន្ថែមមេរៀនថ្មី';$('saveLessonBtn').textContent='រក្សាទុកមេរៀន';$('cancelEdit').classList.add('hidden')}
-function deleteLesson(id){let l=lessons.find(x=>x.id===id);if(!l||!confirm('តើបងចង់លុបមេរៀន "'+l.title+'" មែនទេ?'))return;lessons=lessons.filter(x=>x.id!==id);favorites=favorites.filter(x=>x!==id);completed=completed.filter(x=>x!==id);history=history.filter(x=>x!==id);save();log('លុបមេរៀន: '+l.title);renderPage();renderIcons()}
-function clearLogs(){if(confirm('សម្អាតប្រវត្តិសកម្មភាពទាំងអស់?')){logs=[];save();renderPage()}}
-function sendBroadcast(){if(currentRole!=='admin')return;const message=$('broadcastMessage')?.value.trim();if(!message){alert('សូមសរសេរសារមុនផ្ញើ។');return}broadcasts.unshift({message,time:new Date().toLocaleString(),recipients:appUsers.length});broadcasts=broadcasts.slice(0,30);save();log('ផ្ញើសារជូនដំណឹង');alert('Simulation: បានកត់ត្រាសារជូនដំណឹងសម្រាប់ '+appUsers.length+' គណនី។ មិនទាន់ផ្ញើទៅអ្នកប្រើផ្សេងពិតៗទេ។');renderPage();renderIcons()}
-function changeRole(encodedName,role){if(currentRole!=='admin')return;const name=decodeURIComponent(encodedName);if(name.toLowerCase()==='admin')return;const user=appUsers.find(u=>u.username===name);if(!user)return;user.role=role==='admin'?'admin':'user';save();log('ប្ដូរសិទ្ធិ '+name+' → '+user.role);renderPage();renderIcons()}
-function exportData(){let blob=new Blob([JSON.stringify({lessons,favorites,completed,history,logs,appUsers,broadcasts},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tech-academy-backup.json';a.click();URL.revokeObjectURL(a.href)}
-// Passkey / platform biometric sign-in. Secure authentication requires a server
-// that issues and verifies WebAuthn challenges; this client intentionally does not fake Face ID.
-function setPasskeyStatus(message, isError=false){
- const el=$('passkeyStatus'); el.textContent=message; el.classList.remove('hidden');
- el.className='text-xs mt-2 '+(isError?'text-rose-300':'text-cyan-200');
-}
-function b64urlToBytes(s){
- const pad='='.repeat((4-s.length%4)%4);
- const raw=atob((s+pad).replace(/-/g,'+').replace(/_/g,'/'));
- return Uint8Array.from(raw,c=>c.charCodeAt(0));
-}
-function bytesToB64url(buf){
- return btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
-}
-async function registerPasskey(){
- if(!telegramVerified||!telegramSessionToken){setTelegramStatus('ត្រូវភ្ជាប់ Telegram មុនចុះឈ្មោះ Passkey។',false);return}
- const btn=$('registerPasskeyBtn');
- if(!window.PublicKeyCredential||!navigator.credentials){setPasskeyStatus('Browser នេះមិនគាំទ្រ Passkey ទេ។ សូមប្រើ Chrome/Edge/Safari ជំនាន់ថ្មី និង HTTPS។',true);return}
- if(!window.isSecureContext){setPasskeyStatus('Passkey ត្រូវការគេហទំព័រ HTTPS ឬ localhost។',true);return}
- const username=$('usernameInput').value.trim();
- if(!username){setPasskeyStatus('សូមបញ្ចូល Username មុនចុះឈ្មោះ។',true);return}
- btn.disabled=true;btn.classList.add('opacity-60');setPasskeyStatus('កំពុងរៀបចំការចុះឈ្មោះ Passkey…');
- try{
-  // Backend contract expected:
-  // GET /api/webauthn/register-options?username=<name>
-  // POST /api/webauthn/register-verify with {username, credential}
-  const optionsRes=await fetch('/api/webauthn/register-options?username='+encodeURIComponent(username),{credentials:'include'});
-  if(!optionsRes.ok)throw new Error('SERVER_NOT_CONFIGURED');
-  const opts=await optionsRes.json();
-  opts.challenge=b64urlToBytes(opts.challenge);
-  if(opts.user&&typeof opts.user.id==='string')opts.user.id=b64urlToBytes(opts.user.id);
-  if(opts.excludeCredentials)opts.excludeCredentials=opts.excludeCredentials.map(c=>({...c,id:b64urlToBytes(c.id)}));
-  const cred=await navigator.credentials.create({publicKey:opts});
-  const payload={id:cred.id,rawId:bytesToB64url(cred.rawId),type:cred.type, response:{
-   attestationObject:bytesToB64url(cred.response.attestationObject),
-   clientDataJSON:bytesToB64url(cred.response.clientDataJSON),
-   transports:cred.response.getTransports?cred.response.getTransports():[]
-  },clientExtensionResults:cred.getClientExtensionResults()};
-  const verifyRes=await fetch('/api/webauthn/register-verify',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({username,credential:payload})});
-  if(!verifyRes.ok)throw new Error('VERIFY_FAILED');
-  const result=await verifyRes.json();if(!result.verified)throw new Error('VERIFY_FAILED');
-  setPasskeyStatus('ចុះឈ្មោះ Passkey បានជោគជ័យ។ ពេលក្រោយអាចប្រើ Face ID / Windows Hello ដើម្បីចូល។');
- }catch(err){
-  if(err.name==='NotAllowedError')setPasskeyStatus('ការចុះឈ្មោះត្រូវបានបោះបង់ ឬមិនបានអនុញ្ញាត។',true);
-  else if(err.message==='SERVER_NOT_CONFIGURED')setPasskeyStatus('មិនទាន់មាន WebAuthn Backend ទេ។ ត្រូវដំឡើង Server API មុនចុះឈ្មោះ Face ID/Passkey។',true);
-  else setPasskeyStatus('ចុះឈ្មោះមិនបានសម្រេច។ សូមពិនិត្យ Server API និងការកំណត់ HTTPS/RP ID។',true);
- }finally{btn.disabled=false;btn.classList.remove('opacity-60')}
-}
-async function passkeyLogin(){
- if(!telegramVerified||!telegramSessionToken){setTelegramStatus('ត្រូវភ្ជាប់ Telegram មុនប្រើ Face ID / Passkey។',false);return}
- const btn=$('passkeyBtn');
- if(!window.PublicKeyCredential || !navigator.credentials){
-  setPasskeyStatus('Browser នេះមិនគាំទ្រ Passkey ទេ។ សូមប្រើ Chrome/Edge/Safari ជំនាន់ថ្មី និង HTTPS។',true); return;
- }
- if(!window.isSecureContext){
-  setPasskeyStatus('Passkey ត្រូវការគេហទំព័រ HTTPS ឬ localhost។ សូមបើក App តាម HTTPS។',true); return;
- }
- btn.disabled=true; btn.classList.add('opacity-60');
- setPasskeyStatus('កំពុងស្នើសុំការផ្ទៀងផ្ទាត់ដោយឧបករណ៍របស់អ្នក…');
- try{
-  // Backend contract expected:
-  // GET /api/webauthn/login-options?username=<name>
-  // POST /api/webauthn/login-verify with {credential, username}
-  const username=$('usernameInput').value.trim();
-  const optionsRes=await fetch('/api/webauthn/login-options?username='+encodeURIComponent(username),{credentials:'include'});
-  if(!optionsRes.ok) throw new Error('SERVER_NOT_CONFIGURED');
-  const opts=await optionsRes.json();
-  opts.challenge=b64urlToBytes(opts.challenge);
-  if(opts.allowCredentials) opts.allowCredentials=opts.allowCredentials.map(c=>({...c,id:b64urlToBytes(c.id)}));
-  const credential=await navigator.credentials.get({publicKey:opts});
-  const payload={id:credential.id,rawId:bytesToB64url(credential.rawId),type:credential.type,
-   response:{authenticatorData:bytesToB64url(credential.response.authenticatorData),clientDataJSON:bytesToB64url(credential.response.clientDataJSON),signature:bytesToB64url(credential.response.signature),userHandle:credential.response.userHandle?bytesToB64url(credential.response.userHandle):null}};
-  const verifyRes=await fetch('/api/webauthn/login-verify',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'include',body:JSON.stringify({username,credential:payload})});
-  if(!verifyRes.ok) throw new Error('VERIFY_FAILED');
-  const result=await verifyRes.json();
-  if(!result.verified) throw new Error('VERIFY_FAILED');
-  currentUser=result.username||username; currentRole=result.role==='admin'?'admin':'user';
-  document.body.classList.add('app-active');$('loginScreen').classList.add('hidden');$('appScreen').classList.remove('hidden');$('avatar').textContent=(currentUser[0]||'U').toUpperCase();
-  document.querySelectorAll('.admin-only').forEach(el=>el.classList.toggle('hidden',currentRole!=='admin'));
-  log('ចូលដោយ Passkey / Biometric');go('home');renderIcons();
- }catch(err){
-  if(err.name==='NotAllowedError') setPasskeyStatus('ការផ្ទៀងផ្ទាត់ត្រូវបានបោះបង់ ឬមិនបានអនុញ្ញាត។',true);
-  else if(err.message==='SERVER_NOT_CONFIGURED') setPasskeyStatus('មិនទាន់ភ្ជាប់ WebAuthn Backend ទេ។ Face ID មិនអាចផ្ទៀងផ្ទាត់ដោយសុវត្ថិភាពពី HTML ឯកសារតែមួយបានទេ។ ត្រូវបន្ថែម Server API មុន។',true);
-  else setPasskeyStatus('ការផ្ទៀងផ្ទាត់មិនជោគជ័យទេ។ សូមពិនិត្យ Passkey និង Server API។',true);
- }finally{btn.disabled=false;btn.classList.remove('opacity-60')}
-}
-async function enableNotifications(){
- if(!('Notification' in window)){alert('Browser នេះមិនគាំទ្រ Notifications ទេ។');return}
- const permission=await Notification.requestPermission();
- if(permission==='granted'){new Notification('Tech Academy',{body:'បានបើកការជូនដំណឹងនៅលើ Browser រួចរាល់។'});alert('បានបើក Notifications រួចរាល់!')}
- else alert('មិនទាន់អនុញ្ញាត Notifications ទេ។ សូមបើកក្នុង Browser Settings។')
-}
-function importData(event){
- const file=event.target.files&&event.target.files[0];if(!file)return;
- const reader=new FileReader();
- reader.onload=()=>{try{
-  const d=JSON.parse(reader.result);
-  if(!d||!Array.isArray(d.lessons))throw new Error('invalid');
-  if(!confirm('Import នឹងជំនួសបណ្ណាល័យ និងទិន្នន័យដែលមាន។ បន្តឬទេ?'))return;
-  lessons=d.lessons;favorites=Array.isArray(d.favorites)?d.favorites:[];completed=Array.isArray(d.completed)?d.completed:[];history=Array.isArray(d.history)?d.history:[];logs=Array.isArray(d.logs)?d.logs:[];appUsers=Array.isArray(d.appUsers)?d.appUsers:appUsers;broadcasts=Array.isArray(d.broadcasts)?d.broadcasts:[];
-  save();alert('Import ទិន្នន័យបានជោគជ័យ!');renderPage();renderIcons();
- }catch(e){alert('ឯកសារ JSON មិនត្រឹមត្រូវ ឬមិនមែនជា Backup របស់ Tech Academy ទេ។')}finally{event.target.value=''}};
- reader.readAsText(file);
-}
-function renderIcons(){if(window.lucide)lucide.createIcons()}
-$('loginForm').addEventListener('submit',login);$('signupBtn').addEventListener('click',signup);$('telegramConnectBtn').addEventListener('click',connectTelegram);$('aiOpenBtn').addEventListener('click',openAI);$('aiFloatingBtn').addEventListener('click',openAI);$('aiCloseBtn').addEventListener('click',closeAI);$('aiModal').addEventListener('click',e=>{if(e.target===$('aiModal'))closeAI()});$('aiForm').addEventListener('submit',sendAIMessage);$('passkeyBtn').addEventListener('click',passkeyLogin);$('registerPasskeyBtn').addEventListener('click',registerPasskey);$('logoutBtn').addEventListener('click',logout);$('languageSelect').value=currentLanguage;$('languageSelect').addEventListener('change',e=>applyLanguage(e.target.value));$('themeToggle').addEventListener('click',()=>applyTheme(document.body.classList.contains('light-mode')?'dark':'light'));applyTheme(localStorage.getItem('ta_theme')||'dark');document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));$('closeModal').addEventListener('click',closeLesson);$('lessonModal').addEventListener('click',e=>{if(e.target===$('lessonModal'))closeLesson()});$('modalFavorite').addEventListener('click',()=>{if(currentLesson)toggleFav(currentLesson.id)});$('markComplete').addEventListener('click',()=>{if(!currentLesson)return;let id=currentLesson.id;completed=completed.includes(id)?completed: [...completed,id];save();log('បានរៀនរួច: '+currentLesson.title);$('markComplete').innerHTML='<i data-lucide="check-circle" class="w-4 h-4"></i> បានសម្គាល់រួច ✓';renderIcons()});
-setTelegramStatus('មិនទាន់បានផ្ទៀងផ្ទាត់គណនី Telegram',false);renderIcons();
-</script>
-</body>
-<!-- ================= MAIN APP SHELL & DASHBOARD ================= -->
-<div id="appShell" class="hidden app-shell bg-slate-900 text-slate-100 flex flex-col relative overflow-hidden">
-    
-    <!-- Top Header Bar -->
-    <header class="p-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between sticky top-0 z-20">
-        <div class="flex items-center space-x-3">
-            <div class="w-10 h-10 rounded-2xl bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md border border-blue-400/40" id="userAvatar">F</div>
-            <div>
-                <h2 class="text-xs font-bold text-white flex items-center" id="currentUsername">Ford Owner</h2>
-                <span class="text-[10px] text-emerald-400 flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block mr-1"></span> Telegram Connected</span>
-            </div>
-        </div>
-        <div class="flex items-center space-x-2">
-            <button onclick="toggleThemeMode()" class="p-2 bg-slate-800 rounded-xl text-white hover:bg-slate-700 transition"><i data-lucide="moon" id="themeIcon" class="w-4 h-4"></i></button>
-            <button onclick="logoutApp()" class="p-2 bg-rose-900/40 border border-rose-700/50 rounded-xl text-rose-300 hover:bg-rose-900 transition"><i data-lucide="log-out" class="w-4 h-4"></i></button>
-        </div>
-    </header>
+function handleCustomLogin(event) {
+    event.preventDefault();
+    const user = $('customUsername').value.trim().toLowerCase();
+    const pass = $('customPassword').value.trim();
+    const errorMsg = $('loginErrorMsg');
 
-    <!-- Progress Tracker -->
-    <div class="bg-slate-950 px-4 py-2.5 border-b border-slate-800 flex items-center justify-between text-xs">
-        <span class="text-slate-400 text-[11px]">វឌ្ឍនភាពការរៀនសូត្រ៖</span>
-        <span class="font-bold text-sky-400" id="progressText">0% រួចរាល់</span>
-    </div>
+    const accounts = {
+        "admin": { pass: "admin1234", role: "admin", name: "Ford Admin" },
+        "staff": { pass: "staff1234", role: "user", name: "Ford Technician (កូនជាង)" }
+    };
 
-    <!-- Content Area -->
-    <div class="flex-1 flex flex-col overflow-hidden relative">
+    if(accounts[user] && accounts[user].pass === pass) {
+        errorMsg.classList.add('hidden');
+        currentUser = accounts[user].name;
+        currentRole = accounts[user].role;
         
-        <!-- Tab 1: Lessons -->
-        <div id="tabLessons" class="flex-1 p-4 space-y-4 overflow-y-auto">
-            <div class="relative">
-                <i data-lucide="search" class="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5"></i>
-                <input type="text" id="searchInput" oninput="filterLessons()" placeholder="ស្វែងរកមេរៀន Ford & Battery..." class="field pl-10 text-xs">
-            </div>
-            <div class="space-y-3" id="lessonListContainer"></div>
-        </div>
+        $('loginScreen').classList.add('hidden');
+        $('appShell').classList.remove('hidden');$('currentUsername').innerText = currentUser;
+        $('userAvatar').innerText = user.charAt(0).toUpperCase();
 
-        <!-- Tab 2: AI Gemini Assistant -->
-        <div id="tabAi" class="hidden flex-1 flex flex-col p-4 space-y-3 overflow-hidden">
-            <div class="glass p-3 rounded-2xl flex items-center space-x-3 border border-blue-500/30">
-                <div class="p-2.5 bg-blue-600 text-amber-400 rounded-xl">
-                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+        if(currentRole !== 'admin') {
+            document.querySelectorAll('.admin-only').forEach(el => el.style.display = 'none');
+        }
+        recordLog(currentUser, 'Login ចូលប្រព័ន្ធ');
+        go('home');
+        renderIcons();
+    } else {
+        errorMsg.classList.remove('hidden');
+    }
+}
+
+function logoutApp() { location.reload(); }
+
+function go(page){
+    if(page==='admin' && currentRole!=='admin') { alert('គ្មានសិទ្ធិចូលទីនេះទេ!'); return; }
+    currentPage=page;
+    document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+    let titles={home:'ទំព័រដើម',lessons:'មេរៀនទាំងអស់',favorites:'មេរៀនចំណូលចិត្ត',history:'ប្រវត្តិការរៀន',admin:'គ្រប់គ្រង Admin'};
+    $('pageTitle').textContent=titles[page]||page;
+    renderPage();
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function recordLog(user, action) {
+    logs.unshift({user, action, time: new Date().toLocaleTimeString()});
+    logs = logs.slice(0, 50);
+    localStorage.setItem('ta_logs', JSON.stringify(logs));
+}
+
+function lessonCard(l){
+    let done=completed.includes(l.id), fav=favorites.includes(l.id);
+    return `<article class="card p-4 sm:p-5 flex flex-col justify-between">
+        <div>
+            ${l.image ? `<img src="${l.image}" class="w-full h-36 object-cover rounded-xl mb-3 border border-slate-700">` : ''}
+            <div class="flex flex-wrap gap-2 mb-2"><span class="tag">${l.category}</span>${done?'<span class="tag text-emerald-300">បានរៀនរួច ✓</span>':''}</div>
+            <h3 class="font-bold leading-6 text-white">${l.title}</h3>
+            <p class="text-xs text-slate-400 mt-2 line-clamp-2">${l.desc}</p>
+        </div>
+        <div class="flex items-center justify-between mt-4 pt-3 border-t border-slate-800">
+            <span class="text-[11px] text-slate-500">${l.duration||'មិនកំណត់'}</span>
+            <div class="flex gap-2">
+                <button class="p-2 rounded-lg hover:bg-slate-800 ${fav?'text-cyan-300':'text-slate-500'}" onclick="toggleFav('${l.id}')"><i data-lucide="bookmark" class="w-4 h-4"></i></button>
+                <button class="btn rounded-lg bg-blue-600/20 text-blue-300 px-3 py-2 text-xs font-bold" onclick="openLesson('${l.id}')">រៀនឥឡូវ</button>
+            </div>
+        </div>
+    </article>`;
+}
+
+function renderPage(){
+    let root=$('pageContent');
+    if(currentPage==='home'){
+        let pct = lessons.length ? Math.round((completed.length/lessons.length)*100) : 0;
+        root.innerHTML=`
+        <section class="rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-blue-950 to-[#0b1a2b] border border-blue-900 shadow-xl">
+            <span class="tag border-sky-700 text-sky-200">✦ FORDTECH SMART LEARNING</span>
+            <h1 class="text-2xl sm:text-3xl font-extrabold mt-3 text-white">រៀនជំនាញបច្ចេកវិទ្យា និងរថយន្ត Ford</h1>
+            <p class="text-slate-300 text-sm mt-2 max-w-xl">ស្វែងយល់ពីប្រព័ន្ធកុំព្យូទ័រ Coding អេឡិចត្រូនិក និងបច្ចេកទេសថ្មីៗតាមល្បឿនរបស់អ្នក។</p>
+            <button onclick="go('lessons')" class="btn mt-4 px-5 py-2.5 bg-blue-600 text-sm font-bold text-white shadow-lg">ស្វែងរកមេរៀនទាំងអស់</button>
+        </section>
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div class="card p-4"><div class="text-xs text-slate-400">មេរៀនសរុប</div><div class="text-2xl font-extrabold mt-1 text-white">${lessons.length}</div></div>
+            <div class="card p-4"><div class="text-xs text-slate-400">បានរៀនរួច</div><div class="text-2xl font-extrabold mt-1 text-emerald-400">${completed.length}</div></div>
+            <div class="card p-4"><div class="text-xs text-slate-400">ចំណូលចិត្ត</div><div class="text-2xl font-extrabold mt-1 text-cyan-400">${favorites.length}</div></div>
+            <div class="card p-4"><div class="text-xs text-slate-400">វឌ្ឍនភាព</div><div class="text-2xl font-extrabold mt-1 text-sky-400">${pct}%</div></div>
+        </section>
+        <section>
+            <div class="flex justify-between items-center mb-4"><h2 class="text-lg font-bold text-white">មេរៀនណែនាំ</h2><button onclick="go('lessons')" class="text-xs text-blue-400 hover:underline">មើលទាំងអស់ →</button></div>
+            <div class="grid md:grid-cols-3 gap-4">${lessons.slice(0,3).map(lessonCard).join('')}</div>
+        </section>`;
+    } else if(currentPage==='lessons' || currentPage==='favorites' || currentPage==='history'){
+        let list = currentPage==='favorites' ? lessons.filter(l=>favorites.includes(l.id)) : currentPage==='history' ? history.map(id=>lessons.find(l=>l.id===id)).filter(Boolean) : lessons;
+        root.innerHTML=`
+        <div class="flex flex-col sm:flex-row justify-between gap-3 mb-4">
+            <h1 class="text-xl font-bold text-white">${currentPage==='favorites'?'មេរៀនចំណូលចិត្ត':currentPage==='history'?'ប្រវត្តិបានមើល':'បណ្ណាល័យមេរៀនទាំងអស់'}</h1>
+            <input id="searchLessons" oninput="filterLessonsList()" class="field sm:w-64 text-xs" placeholder="ស្វែងរកមេរៀន...">
+        </div>
+        <div id="dynamicLessonGrid" class="grid md:grid-cols-3 gap-4">${list.map(lessonCard).join('') || '<p class="text-slate-500 text-sm py-8">មិនទាន់មានទិន្នន័យនៅទីនេះទេ។</p>'}</div>`;
+    } else if(currentPage==='admin'){
+        root.innerHTML=`
+        <div class="grid lg:grid-cols-2 gap-6">
+            <div class="card p-5 space-y-4">
+                <h2 class="font-bold text-white text-base flex items-center gap-2"><i data-lucide="plus-circle" class="w-5 h-5 text-sky-400"></i> បន្ថែមមេរៀនថ្មីជាមួយរូបភាព</h2>
+                <div>
+                    <label class="text-xs text-slate-400 block mb-1">ចំណងជើងមេរៀន</label>
+                    <input id="adminTitle" class="field text-xs" placeholder="ឧ. ការជួសជុលប្រព័ន្ធໄຟរថយន្ត">
                 </div>
                 <div>
-                    <h3 class="text-xs font-bold text-white">AI Gemini Tech Assistant</h3>
-                    <p class="text-[10px] text-slate-400">ជំនួយការឆ្លាតវៃផ្នែកបច្ចេកវិទ្យា និងរថយន្ត Ford</p>
+                    <label class="text-xs text-slate-400 block mb-1">ប្រភេទមេរៀន</label>
+                    <select id="adminCategory" class="field text-xs">
+                        <option>Computer</option><option>Coding</option><option>Electronics</option><option>Hardware</option><option>Security</option><option>Automotive</option>
+                    </select>
                 </div>
+                <div>
+                    <label class="text-xs text-slate-400 block mb-1">រយៈពេល</label>
+                    <input id="adminDuration" class="field text-xs" placeholder="ឧ. 10 នាទី">
+                </div>
+                <div>
+                    <label class="text-xs text-slate-400 block mb-1">អាប់ឡូតរូបភាព (Image Upload)</label>
+                    <input type="file" id="adminImageFile" accept="image/*" onchange="handleImageUpload(event)" class="field text-xs file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-500">
+                    <div id="previewContainer" class="mt-2 hidden"><img id="imagePreview" class="w-full h-32 object-cover rounded-xl border border-slate-700"></div>
+                </div>
+                <div>
+                    <label class="text-xs text-slate-400 block mb-1">ខ្លឹមសារមេរៀន</label>
+                    <textarea id="adminDesc" class="field text-xs h-28" placeholder="សរសេរពន្យល់លម្អិត..."></textarea>
+                </div>
+                <button onclick="addNewLessonFromAdmin()" class="btn bg-blue-600 w-full py-3 text-xs font-bold text-white shadow-lg">បង្ហោះមេរៀនចូលប្រព័ន្ធ</button>
             </div>
-            <div id="chatContainer" class="flex-1 bg-slate-950/80 border border-slate-800/80 rounded-2xl p-3 overflow-y-auto space-y-3 text-xs">
-                <div class="flex items-start space-x-2">
-                    <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-blue-200 shrink-0 font-bold text-[10px]">AI</div>
-                    <div class="bg-slate-900 border border-slate-800 p-3 rounded-2xl text-slate-200 max-w-[80%] leading-relaxed">
-                        សួស្តី! ខ្ញុំជា AI Gemini ជំនួយការបច្ចេកវិទ្យា និងរថយន្ត Ford ។ តើខ្ញុំអាចជួយអ្វីដល់អ្នកនៅថ្ងៃនេះ?
+            
+            <div class="space-y-4">
+                <div class="card p-5">
+                    <h2 class="font-bold text-white mb-3">គ្រប់គ្រងមេរៀនដែលមានស្រាប់ (${lessons.length})</h2>
+                    <div class="space-y-2 max-h-80 overflow-y-auto pr-1">
+                        ${lessons.map(l=>`
+                            <div class="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800">
+                                <div class="min-w-0 pr-2">
+                                    <p class="text-xs font-bold text-white truncate">${l.title}</p>
+                                    <span class="text-[10px] text-slate-400">${l.category} ·${l.duration||''}</span>
+                                </div>
+                                <button onclick="deleteLesson('${l.id}')" class="p-2 text-rose-400 hover:bg-rose-950/50 rounded-lg"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="card p-5">
+                    <h2 class="font-bold text-white mb-3">Audit Logs (សកម្មភាព Admin)</h2>
+                    <div class="space-y-1.5 max-h-40 overflow-y-auto text-xs">
+                        ${logs.map(lg=>`<div class="flex justify-between border-b border-slate-800 pb-1.5 text-slate-300"><span><b>${lg.user}</b>:${lg.action}</span><span class="text-slate-500">${lg.time}</span></div>`).join('') || '<p class="text-slate-500">គ្មានសកម្មភាពថ្មី។</p>'}
                     </div>
                 </div>
             </div>
-            <div class="flex items-center space-x-2">
-                <input type="text" id="aiInput" placeholder="សួរមតិយោបល់ ឬបញ្ហាបច្ចេកវិទ្យា..." class="field flex-1 text-xs">
-                <button onclick="sendAiMessage()" class="btn bg-blue-600 p-3 rounded-xl text-white hover:bg-blue-500">
-                    <i data-lucide="send" class="w-4 h-4"></i>
-                </button>
-            </div>
-        </div>
+        </div>`;
+    }
+    renderIcons();
+}
 
-        <!-- Tab 3: Bookmarks -->
-        <div id="tabBookmarks" class="hidden flex-1 p-4 space-y-3 overflow-y-auto">
-            <h3 class="text-xs font-bold text-sky-400 flex items-center"><i data-lucide="bookmark" class="w-4 h-4 mr-1.5"></i> មេរៀនដែលបានរក្សាទុក</h3>
-            <div class="space-y-3" id="bookmarkListContainer"></div>
-        </div>
+function filterLessonsList() {
+    let q = $('searchLessons').value.toLowerCase();
+    let filtered = lessons.filter(l => l.title.toLowerCase().includes(q) || l.desc.toLowerCase().includes(q));
+    $('dynamicLessonGrid').innerHTML = filtered.map(lessonCard).join('') || '<p class="text-slate-500 text-sm">រកមិនឃើញមេរៀនទេ។</p>';
+    renderIcons();
+}
 
-        <!-- Tab 4: Admin Panel -->
-        <div id="tabAdmin" class="hidden flex-1 p-4 space-y-4 overflow-y-auto">
-            <div class="grid grid-cols-2 gap-3">
-                <div class="glass p-3 rounded-2xl text-center">
-                    <span class="text-[10px] text-slate-400">ចំនួនមេរៀនសរុប</span>
-                    <h4 class="text-lg font-bold text-sky-400" id="statTotalLessons">1</h4>
-                </div>
-                <div class="glass p-3 rounded-2xl text-center">
-                    <span class="text-[10px] text-slate-400">អ្នកចូលប្រើសរុប</span>
-                    <h4 class="text-lg font-bold text-emerald-400" id="statTotalUsers">1</h4>
-                </div>
-            </div>
-            <div class="glass p-4 rounded-2xl space-y-3">
-                <h3 class="text-xs font-bold flex items-center text-sky-400"><i data-lucide="plus-circle" class="w-4 h-4 mr-1.5"></i> បន្ថែមមេរៀនថ្មី</h3>
-                <input type="text" id="newLessonTitle" placeholder="ចំណងជើងមេរៀន..." class="field text-xs">
-                <textarea id="newLessonDesc" placeholder="ខ្លឹមសារ ឬជំហានអនុវត្ត..." class="field text-xs h-20"></textarea>
-                <button onclick="addNewLesson()" class="btn w-full bg-blue-600 hover:bg-blue-500 py-2.5 rounded-xl text-xs font-medium text-white">បង្ហោះមេរៀនថ្មី</button>
-            </div>
-            <div class="glass p-4 rounded-2xl space-y-3">
-                <h3 class="text-xs font-bold flex items-center text-emerald-400"><i data-lucide="activity" class="w-4 h-4 mr-1.5"></i> Activity Audit Logs</h3>
-                <div class="overflow-x-auto max-h-40">
-                    <table class="w-full text-left text-[11px]">
-                        <thead class="sticky top-0 bg-slate-900 border-b border-slate-800 text-slate-400">
-                            <tr>
-                                <th class="py-2 px-1">User</th>
-                                <th class="py-2 px-1">សកម្មភាព</th>
-                                <th class="py-2 px-1">ម៉ោង</th>
-                            </tr>
-                        </thead>
-                        <tbody id="logTableBody" class="divide-y divide-slate-800/40"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+function handleImageUpload(event) {
+    let file = event.target.files[0];
+    if(!file) return;
+    let reader = new FileReader();
+    reader.onload = function(e) {
+        uploadedImgBase64 = e.target.result;
+        $('imagePreview').src = uploadedImgBase64;
+        $('previewContainer').classList.remove('hidden');
+    }
+    reader.readAsDataURL(file);
+}
 
-    <!-- Bottom Navigation Bar -->
-    <nav class="grid grid-cols-4 bg-slate-900 border-t border-slate-800 text-[10px] font-medium py-2">
-        <button onclick="switchTab('Lessons')" id="navLessons" class="navbtn active justify-center flex-col"><i data-lucide="book-open" class="w-4 h-4"></i><span>មេរៀន</span></button>
-        <button onclick="switchTab('Ai')" id="navAi" class="navbtn justify-center flex-col"><i data-lucide="bot" class="w-4 h-4"></i><span>AI Gemini</span></button>
-        <button onclick="switchTab('Bookmarks')" id="navBookmarks" class="navbtn justify-center flex-col"><i data-lucide="bookmark" class="w-4 h-4"></i><span>ចំណាំ</span></button>
-        <button onclick="switchTab('Admin')" id="navAdmin" class="navbtn justify-center flex-col"><i data-lucide="shield" class="w-4 h-4"></i><span>Admin</span></button>
-    </nav>
-</div>
+function addNewLessonFromAdmin() {
+    let title = $('adminTitle').value.trim();
+    let category = $('adminCategory').value;
+    let duration = $('adminDuration').value.trim() || '5 នាទី';
+    let desc = $('adminDesc').value.trim();
 
-<!-- ================= LESSON MODAL ================= -->
-<div id="lessonModal" class="absolute inset-0 bg-slate-950/95 backdrop-blur-md hidden flex flex-col p-5 z-50">
-    <div class="flex justify-between items-center mb-4">
-        <span class="text-[10px] uppercase tracking-wider text-sky-400 bg-blue-600/20 px-2.5 py-1 rounded-full font-bold border border-blue-500/30">Ford Tech Guide</span>
-        <button onclick="closeLessonModal()" class="p-2 text-slate-400 hover:text-white bg-slate-900 rounded-full border border-slate-800"><i data-lucide="x" class="w-4 h-4"></i></button>
-    </div>
-    <div class="glass p-4 rounded-2xl flex-1 overflow-y-auto space-y-4">
-        <h3 id="modalTitle" class="text-sm font-bold text-white"></h3>
-        <div class="aspect-video bg-slate-950 rounded-xl flex flex-col items-center justify-center border border-slate-800 relative shadow-inner select-none pointer-events-none">
-            <div class="p-3 bg-blue-600 text-white rounded-full shadow-lg shadow-blue-600/40 border border-blue-400/30">
-                <i data-lucide="lock" class="w-5 h-5"></i>
-            </div>
-            <span class="text-[11px] text-slate-400 mt-2 font-medium">វីដេអូមានប្រព័ន្ធការពារសុវត្ថិភាព (Protected)</span>
-        </div>
-        <div class="space-y-1.5">
-            <h4 class="text-xs font-bold text-slate-300">ជំហានអនុវត្ត៖</h4>
-            <p id="modalDesc" class="text-xs text-slate-400 leading-relaxed bg-slate-950/80 p-3.5 rounded-xl border border-slate-800/80 whitespace-pre-line select-none"></p>
-        </div>
-        <button onclick="markAsCompleted()" id="completeBtn" class="btn w-full bg-emerald-600 hover:bg-emerald-500 py-3 rounded-xl text-xs font-bold text-white shadow-lg">សម្គាល់ថាបានរៀនចប់ ✅</button>
-    </div>
-</div>
+    if(!title || !desc) { alert('សូមបំពេញចំណងជើង និងខ្លឹមសារមេរៀន!'); return; }
 
-<!-- JavaScript Logic Integration -->
-<script>
-    lucide.createIcons();
+    let newLesson = {
+        id: 'lesson-' + Date.now(),
+        title,
+        category,
+        duration,
+        desc,
+        image: uploadedImgBase64
+    };
 
-    let completedLessons = JSON.parse(localStorage.getItem('ford_completed')) || [];
-    let bookmarks = JSON.parse(localStorage.getItem('ford_bookmarks')) || [];
-    let logs = JSON.parse(localStorage.getItem('ford_logs')) || [];
-    let lessons = JSON.parse(localStorage.getItem('ford_lessons')) || [
-        { id: 1, title: 'การ Reset Battery រថយន្ត Ford & ឧបករណ៍អេឡិចត្រូនិច', desc: '១. បើកកុងតាក់រថយន្ត ON Mode។\n២. ចុចភ្លើង Hazard ៣ដង រួចជាន់ហ្វ្រាំង ១ដង។\n៣. សង្កេតមើលភ្លើងសញ្ញា Battery លោតភ្លឹបភ្លែតៗ។' }
-    ];
-    let activeLessonId = null;
+    lessons.unshift(newLesson);
+    localStorage.setItem('ta_lessons', JSON.stringify(lessons));
+    recordLog('Admin', 'បានបន្ថែមមេរៀនថ្មី: ' + title);
+    
+    // Reset form
+    $('adminTitle').value = '';$('adminDesc').value = '';
+    $('adminDuration').value = '';$('adminImageFile').value = '';
+    uploadedImgBase64 = '';
+    $('previewContainer').classList.add('hidden');
 
-    // Telegram Auth Event Trigger
-    document.getElementById('telegramConnectBtn').addEventListener('click', function() {
-        let username = "Ford_Admin_Pro";
-        document.getElementById('telegramStatus').innerText = "ផ្ទៀងផ្ទាត់ Telegram ជោគជ័យ (@" + username + ")";
-        document.getElementById('telegramStatus').className = "text-xs text-emerald-400 mt-1 font-bold";
-        document.getElementById('telegramConnectBtn').classList.add('hidden');
-        
-        // Hide Login Screen & Show App Shell
-        document.getElementById('loginScreen').classList.add('hidden');
-        document.getElementById('appShell').classList.remove('hidden');
-        document.body.classList.add('app-active');
+    alert('បានបន្ថែមមេរៀនជោគជ័យ!');
+    go('lessons');
+}
 
-        document.getElementById('currentUsername').innerText = username;
-        document.getElementById('userAvatar').innerText = username.charAt(0).toUpperCase();
-        
-        recordLog(username, 'Login ចូលប្រព័ន្ធ Mini App');
-        renderLessons();
-        renderBookmarks();
-        renderLogs();
-        updateStats();
-    });
+function deleteLesson(id) {
+    let l = lessons.find(x => x.id === id);
+    if(!l || !confirm('តើអ្នកពិតជាចង់លុបមេរៀននេះមែនទេ?')) return;
+    lessons = lessons.filter(x => x.id !== id);
+    favorites = favorites.filter(x => x !== id);
+    completed = completed.filter(x => x !== id);
+    localStorage.setItem('ta_lessons', JSON.stringify(lessons));
+    localStorage.setItem('ta_favorites', JSON.stringify(favorites));
+    localStorage.setItem('ta_completed', JSON.stringify(completed));
+    recordLog('Admin', 'បានលុបមេរៀន ID: ' + id);
+    renderPage();
+}
 
-    function recordLog(user, action) {
-        logs.unshift({ user, action, time: new Date().toLocaleTimeString() });
-        localStorage.setItem('ford_logs', JSON.stringify(logs));
-        renderLogs();
+function openLesson(id){
+    currentLesson = lessons.find(x => x.id === id);
+    if(!currentLesson) return;
+    
+    // Add to history
+    history = [id, ...history.filter(x => x !== id)].slice(0, 20);
+    localStorage.setItem('ta_history', JSON.stringify(history));
+
+    $('modalTitle').textContent = currentLesson.title;
+    $('modalCategory').textContent = currentLesson.category;
+    $('modalDesc').textContent = currentLesson.desc;
+    
+    let imgContainer = $('modalImageContainer');
+    if(currentLesson.image) {
+        $('modalImg').src = currentLesson.image;
+        imgContainer.classList.remove('hidden');
+    } else {
+        imgContainer.classList.add('hidden');
     }
 
-    function renderLogs() {
-        const tbody = document.getElementById('logTableBody');
-        if(!tbody) return;
-        tbody.innerHTML = logs.map(l => `
-            <tr><td class="py-2 px-1 text-sky-300 font-medium">${l.user}</td><td class="py-2 px-1 text-slate-300">${l.action}</td><td class="py-2 px-1 text-slate-400 text-[10px]">${l.time}</td></tr>
-        `).join('');
-    }
+    let isDone = completed.includes(id);
+    $('markCompleteBtn').innerHTML = `<i data-lucide="check-circle" class="w-4 h-4"></i> ${isDone ? 'បានរៀនរួចរាល់ ✓' : 'សម្គាល់ថាបានរៀនរួច'}`;
+    
+    let isFav = favorites.includes(id);
+    $('modalFavoriteBtn').innerHTML = `<i data-lucide="bookmark" class="w-4 h-4"></i> ${isFav ? 'ដកចេញពីចំណូលចិត្ត' : 'ចំណូលចិត្ត'}`;
 
-    function renderLessons(list = lessons) {
-        const container = document.getElementById('lessonListContainer');
-        container.innerHTML = list.map(l => {
-            let isCompleted = completedLessons.includes(l.id);
-            let isMarked = bookmarks.includes(l.id);
-            return `
-                <div class="card p-4 flex items-center justify-between cursor-pointer">
-                    <div onclick="openLessonModal(${l.id})" class="flex items-center space-x-3 flex-1 min-w-0">
-                        <div class="p-3 bg-blue-600/30 text-sky-400 rounded-xl shrink-0"><i data-lucide="${isCompleted ? 'check-circle' : 'wrench'}" class="w-5 h-5 ${isCompleted ? 'text-emerald-400' : ''}"></i></div>
-                        <div class="min-w-0"><h3 class="font-bold text-xs text-white truncate">${l.title}</h3><p class="text-[11px] text-slate-400 truncate">${l.desc}</p></div>
-                    </div>
-                    <button onclick="toggleBookmark(${l.id})" class="p-2 text-slate-400 hover:text-amber-400"><i data-lucide="bookmark" class="w-4 h-4 ${isMarked ? 'fill-amber-400 text-amber-400' : ''}"></i></button>
-                </div>
-            `;
-        }).join('');
-        lucide.createIcons();
-    }
+    $('lessonModal').classList.remove('hidden');
+    renderIcons();
+}
 
-    function filterLessons() {
-        let q = document.getElementById('searchInput').value.toLowerCase();
-        let filtered = lessons.filter(l => l.title.toLowerCase().includes(q) || l.desc.toLowerCase().includes(q));
-        renderLessons(filtered);
-    }
+function closeLesson() { $('lessonModal').classList.add('hidden'); currentLesson = null; }
 
-    function openLessonModal(id) {
-        let l = lessons.find(x => x.id === id);
-        if(!l) return;
-        activeLessonId = id;
-        document.getElementById('modalTitle').innerText = l.title;
-        document.getElementById('modalDesc').innerText = l.desc;
-        document.getElementById('lessonModal').classList.remove('hidden');
-        lucide.createIcons();
-    }
+function toggleFav(id) {
+    favorites = favorites.includes(id) ? favorites.filter(x => x !== id) : [id, ...favorites];
+    localStorage.setItem('ta_favorites', JSON.stringify(favorites));
+    renderPage();
+}
 
-    function closeLessonModal() {
-        document.getElementById('lessonModal').classList.add('hidden');
-    }
+function toggleFavFromModal() {
+    if(!currentLesson) return;
+    toggleFav(currentLesson.id);
+    let isFav = favorites.includes(currentLesson.id);
+    $('modalFavoriteBtn').innerHTML = `<i data-lucide="bookmark" class="w-4 h-4"></i> ${isFav ? 'ដកចេញពីចំណូលចិត្ត' : 'ចំណូលចិត្ត'}`;
+    renderIcons();
+}
 
-    function markAsCompleted() {
-        if(!completedLessons.includes(activeLessonId)) {
-            completedLessons.push(activeLessonId);
-            localStorage.setItem('ford_completed', JSON.stringify(completedLessons));
-            updateStats();
-            closeLessonModal();
-            renderLessons();
-            recordLog('User', 'រៀនចប់មេរៀន ID: ' + activeLessonId);
-        }
+function markCompleted() {
+    if(!currentLesson) return;
+    let id = currentLesson.id;
+    if(!completed.includes(id)) {
+        completed.push(id);
+        localStorage.setItem('ta_completed', JSON.stringify(completed));
     }
+    $('markCompleteBtn').innerHTML = `<i data-lucide="check-circle" class="w-4 h-4"></i> បានរៀនរួចរាល់ ✓`;
+    renderIcons();
+}
 
-    function updateStats() {
-        let pct = Math.round((completedLessons.length / lessons.length) * 100);
-        document.getElementById('progressText').innerText = pct + "% រួចរាល់";
-        document.getElementById('statTotalLessons').innerText = lessons.length;
-        document.getElementById('statTotalUsers').innerText = logs.length;
-    }
+function toggleThemeMode() {
+    document.body.classList.toggle('light-mode');
+    let isLight = document.body.classList.contains('light-mode');
+    $('themeLabel').textContent = isLight ? 'Light' : 'Dark';
+    localStorage.setItem('ta_theme', isLight ? 'light' : 'dark');
+}
 
-    function toggleBookmark(id) {
-        if(bookmarks.includes(id)) bookmarks = bookmarks.filter(b => b !== id);
-        else bookmarks.push(id);
-        localStorage.setItem('ford_bookmarks', JSON.stringify(bookmarks));
-        renderLessons();
-        renderBookmarks();
-    }
+if(localStorage.getItem('ta_theme')==='light') {
+    document.body.classList.add('light-mode');
+    $('themeLabel').textContent = 'Light';
+}
 
-    function renderBookmarks() {
-        let container = document.getElementById('bookmarkListContainer');
-        let marked = lessons.filter(l => bookmarks.includes(l.id));
-        if(marked.length === 0) {
-            container.innerHTML = `<p class="text-xs text-slate-500 text-center py-4">ពុំទាន់មានមេរៀនបានចំណាំ។</p>`;
-            return;
-        }
-        container.innerHTML = marked.map(l => `
-            <div onclick="openLessonModal(${l.id})" class="card p-3 flex items-center justify-between cursor-pointer"><span class="text-xs font-bold text-white truncate">${l.title}</span><i data-lucide="chevron-right" class="w-4 h-4 text-sky-400"></i></div>
-        `).join('');
-        lucide.createIcons();
-    }
-
-    function addNewLesson() {
-        let title = document.getElementById('newLessonTitle').value;
-        let desc = document.getElementById('newLessonDesc').value;
-        if(!title || !desc) { alert('សូមបំពេញព័ត៌មាន!'); return; }
-        lessons.push({ id: lessons.length + 1, title, desc });
-        localStorage.setItem('ford_lessons', JSON.stringify(lessons));
-        document.getElementById('newLessonTitle').value = '';
-        document.getElementById('newLessonDesc').value = '';
-        renderLessons();
-        updateStats();
-        alert('បានបន្ថែមមេរៀនថ្មីជោគជ័យ!');
-    }
-
-    function switchTab(tab) {
-        ['Lessons', 'Ai', 'Bookmarks', 'Admin'].forEach(t => {
-            document.getElementById('tab' + t).classList.add('hidden');
-            document.getElementById('nav' + t).classList.remove('active');
-        });
-        document.getElementById('tab' + tab).classList.remove('hidden');
-        document.getElementById('nav' + tab).classList.add('active');
-    }
-
-    function toggleThemeMode() {
-        document.body.classList.toggle('light-mode');
-        let icon = document.getElementById('themeIcon');
-        if(document.body.classList.contains('light-mode')) {
-            icon.setAttribute('data-lucide', 'sun');
-        } else {
-            icon.setAttribute('data-lucide', 'moon');
-        }
-        lucide.createIcons();
-    }
-
-    function logoutApp() {
-        location.reload();
-    }
-
-    function sendAiMessage() {
-        let input = document.getElementById('aiInput');
-        let text = input.value.trim();
-        if(!text) return;
-        let chat = document.getElementById('chatContainer');
-        chat.innerHTML += `<div class="flex justify-end"><div class="bg-blue-600 text-white p-3 rounded-2xl max-w-[80%]">${text}</div></div>`;
-        input.value = '';
-        setTimeout(() => {
-            chat.innerHTML += `<div class="flex space-x-2"><div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-[10px]">AI</div><div class="glass p-3 rounded-2xl text-slate-200 max-w-[80%]">ឆ្លើយតបពី AI Gemini ៖ សម្រាប់ការពិនិត្យប្រព័ន្ធរថយន្ត Ford គឺត្រូវធានាថាចរន្តថ្មមានកម្រិតស្តង់ដារ ១២.៦វ៉ុល។</div></div>`;
-            chat.scrollTop = chat.scrollHeight;
-        }, 800);
-    }
+function renderIcons(){ if(window.lucide) lucide.createIcons(); }
+renderIcons();
 </script>
 </body>
 </html>

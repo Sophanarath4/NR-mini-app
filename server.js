@@ -76,4 +76,17 @@ app.post('/api/gemini/chat', requireTelegramSession, async (req, res) => {
 });
 
 app.get('*', (_req, res) => res.sendFile(path.join(__dirname, 'public', 'index.html')));
-app.listen(PORT, () => console.log(`FordTech Academy listening on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`FordTech Academy listening on http://localhost:3000`));
+// ឧទាហរណ៍កូដហៅ API ផ្ទៀងផ្ទាត់ Telegram ក្នុង Frontend
+async function verifyTelegramData(telegramUserObj) {
+    let res = await fetch('/api/telegram/verify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ telegram: telegramUserObj })
+    });
+    let data = await res.json();
+    if(data.verified) {
+        localStorage.setItem('jwt_token', data.sessionToken);
+        // ចូលទៅកាន់ Dashboard
+    }
+}
